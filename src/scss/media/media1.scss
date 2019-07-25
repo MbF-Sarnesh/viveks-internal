@@ -1,0 +1,54 @@
+/* Responsive */
+
+@media screen and (max-width: 1400px) {
+	.container{
+		width:100%!important;
+	}
+}
+
+@media screen and (max-width: 800px) {
+	body{
+		&.open{
+			overflow:hidden;
+		}
+	}
+}
+
+@media screen and (max-width: 640px) {	
+	.contact-card{
+		padding: 40px 15px 48px;
+		margin-bottom: 0px;
+		width:100%;
+		.formRow{
+			margin-bottom:40px;
+			&.checkboxradio{
+				margin-bottom: 25px;
+ 				@include display-flex;
+ 				@include flex-flow(row wrap); 				
+		    }
+		    .checkboxradio-row{
+				width: 50%;
+	    	}		    
+		}
+  		.align-left{
+	 		padding-left:0px;
+	 	}
+	 	.col-location{
+		    padding-top: 0px;
+		    padding-bottom: 0px;
+		}
+	}
+	.radio-error{
+	  margin-bottom: 22px;
+	}
+}
+
+@media screen and (max-width: 440px) {
+	.contact-card{
+		.formRow{
+		    .checkboxradio-row{
+				width: 100%;
+	    	}
+		}
+	}
+}

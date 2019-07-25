@@ -1,0 +1,240 @@
+.line-strike {
+	position: relative; 
+	padding-bottom: 20px;
+	white-space: nowrap;
+	width: 100%;
+	&-content {
+		background-color: $white;
+		color: $primary-color;
+		font-size: 16px;
+		font-family: $nunito-bold;
+		letter-spacing: 2px;
+		line-height: 16px;
+		left: 50%;
+		position: absolute;
+		padding: 0px 10px;
+		transform: translateX(-50%);
+		text-transform: uppercase;
+	}
+	&:before {
+		background-color: #C7C7C7;
+		content: '';
+		height: 1px;
+		position: absolute;
+		top: 7px;
+		width: 100%;
+	}
+}
+.product_card_section{
+	.tabcard{
+		text-align: center;
+	    padding-bottom: 38px;
+		ul{
+			padding: 0px 0px;
+		}
+		li{
+			display: inline-block;
+			vertical-align: middle;
+			cursor: pointer;
+			a{
+				color: #184487;
+				font-family: $nunito-bold;
+				font-size: 16px;
+				line-height: 24px;
+				padding: 10px 15px;
+				text-transform: uppercase;
+				display: inline-block;
+				&.active{
+					background: $darkCeruleanBlue;
+					border-radius: 4px;
+					color: $white;
+				}
+				&:before{
+					display:none;
+				}
+			}
+		}
+	}
+	.accordiantab-content{
+		padding: 10px 0px;
+	}
+		
+}
+.tab_con{
+	display: none;
+	&.active{
+		display: block;
+	}
+}
+.row.type-1{
+		margin: 0px -7px;
+		.col-3{
+			padding: 0px 7px;
+			&:nth-of-type(n+5){
+				padding-top: 14px;
+			}
+		}
+	}
+.card_con{
+	background: $white;	
+	display: block;
+	vertical-align: middle;
+	width: 100%;
+	height: 100%;
+	text-align: left;	
+	.card_top {
+		position: relative;
+   	   	&:before{
+			content: "\f08a";
+			position: absolute;
+			right: 0px;
+			top: 0px;
+			font-family: $line-awesome;
+			font-size: 20px;
+			color: #a8a8a8;
+			}
+			&.active{
+				&:before{
+				content: "\f004";	
+				color: $crimsonRed;
+	   	   	}
+   		}
+	}
+	&:before{
+		display:none;
+	}
+	.card_img{
+		height: 200px;
+		padding-top: 5px;
+		width: 100%;
+		img{
+			width: 100%;
+			height: 100%;
+			object-fit: contain;
+		}
+	}
+	h5{
+		font-family: $nunito-semibold;
+		font-size: 16px;
+		line-height: 24px;
+		padding-bottom: 10px;
+	}
+	.offers_List{
+		color:$body-copy;
+		font-family: $nunito-black;
+		font-size: 18px;
+		line-height: 24px;
+		padding-bottom: 15px;
+		strike {
+			color: #8A8A8A;
+			font-family: $nunito-bold;
+			font-size: 14px;
+			color: #8A8A8A;
+			line-height: 20px;
+		}
+		span {
+			font-family: $nunito-bold;
+			font-size: 14px;
+			color: #EC1C24;
+			letter-spacing: 0;
+			line-height: 20px;
+		}
+	}
+	h6{
+		font-family: $nunito-bold;
+		font-size: 14px;
+		line-height: 20px;
+		color: #A8A8A8;;
+		padding-bottom: 5px;
+	}
+	.intro-label{
+		margin-bottom: 10px;
+	}
+	.card_content{
+		padding: 20px 20px 0px 20px;
+	}
+}
+.unitprice{
+	color:#5e5e5e;
+    position: relative;
+    margin-right: 10px;
+    font-family: $nunito-regular;
+    &:before {
+	    content: "";
+	    position: absolute;
+	    height: 2px;
+	    width: 100%;
+	    background-color: #5e5e5e;
+	    top: 50%;
+	    left: 0;
+	    @include transform(translateY(-50%));
+	}
+}
+.section-productlist{
+	padding-bottom: 66px;
+}
+@media screen and (max-width: 1024px){
+	.section-productlist{
+		padding-bottom: 0px;
+	}
+	.product_card_section{
+		.accordiantab-wrapper{
+			padding-left: 0px;
+			padding-right: 0px;
+		}
+		.accordiantab-content{
+			padding-left: 7px;
+			padding-right: 7px;	
+			padding:20px 0px;
+		}
+		.accordiantab .accordiantab-title{
+			text-transform: uppercase;
+			text-align: center;
+		    padding: 23px 23px 23px 20px;
+		}
+		.row.type-1{
+			[class*='col-'] {
+				height: auto;
+				&:nth-child(odd){
+				    padding-right: 5px;
+    				padding-left: 0px;
+				}
+				&:nth-child(2n+2){
+					padding-right: 0px;
+    				padding-left: 5px;	
+				}
+				/*padding-left: 0px;
+				padding-right: 0px;	*/
+			    max-width: 50%;
+			    @include flex(0 0 50%);
+			}
+			.col-3:nth-of-type(n+3){
+				padding-top: 14px;
+			}
+		}
+	}
+	.card_con {
+		.card_top:before {
+			right: 15px;
+		}
+		h5 {
+			font-size: 14px;
+		}
+		.offers_List {
+			font-size: 16px;
+		}
+		h6 {
+			font-size: 11px;
+		}
+	}
+	.line-strike-content {
+		letter-spacing: 0px;
+	}
+
+}
+@media screen and (max-width: 768px) {
+	.card_con .offers_List span {
+		display: block;
+		padding-top: 15px;
+	}
+}

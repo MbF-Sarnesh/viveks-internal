@@ -1,0 +1,131 @@
+.floating-item {
+	display: block;
+	position: relative;
+	margin: 0;
+	&:before{
+		background-color: #C7C7C7;
+		content: "";
+		position: absolute;
+		left: 50%;
+		bottom: 0;
+		width: 0;
+		height: 1px;
+		@include transform(translateX(-50%));
+		@include transition-event(all, 300ms, ease-in);
+	}
+	&.input-animate{
+		&:before{
+			width: 100%;
+		}
+	}
+	&-input {
+		border: {
+			bottom:$fm-border-thickness solid #C7C7C7;
+			left: 0;
+			right: 0;
+			top: 0;
+		}
+		@include transition-event(border, 0.25s, ease-in);
+		padding:3px 0 3px 0;
+		width: 100%;
+		&:focus {
+			border-color:black;
+		}
+	}
+	&, &-input {
+		font-size:14px;
+		line-height: 19px;
+	}
+	&-input:focus ~label {
+		color:$black;
+	}
+	&-input:focus ~ &-label,.input-email-active ~ &-label {
+	    color:#A8A8A8;
+		font-size:12px;
+		line-height: 16px;
+		font-family: $nunito-bold;
+		margin: 0px;
+		top:-20px;
+		/*letter-spacing:2px;*/
+		/*text-transform: uppercase;*/
+	}
+	&-label {
+		@include transition-event(all, 0.15s, ease-in);
+		color:#aaa;
+		cursor: text;
+		font-family: $nunito-regular;
+		left:0; 
+		position: absolute;
+		top: 0px;
+        line-height: 27px;
+       /* text-transform:uppercase;*/
+        letter-spacing: 0;
+	}
+	&-icon {
+		line-height: 20px;
+		left:15px;
+		position: absolute;
+		top:14px;
+	}
+}
+.input-with-icon .floating-item-input {
+	padding-left: 40px;
+}
+.input-with-icon .floating-item-label {
+	left: 37px;	
+}
+
+input[type="file"]{
+	opacity:0;
+	padding: 12px 15px;
+}
+
+input[type="file"], 
+.upload-button, .subscribe-button {	
+	cursor:pointer;
+	position: absolute;
+	top:0;
+	width:100%;
+	right:0;
+}
+
+.upload-button, .subscribe-button {
+	border:none;
+	height:46px;
+	width:150px;
+}
+
+.upload-input{
+	padding-right:150px;
+}
+.succes-message {
+	display:none;
+	padding:15px 0 0 0;
+}
+.subscribe-button {
+	background-color:$link-color;
+	.button {
+		background-color:$link-color;
+		color:$white;
+		height:100%;
+		margin:0;
+		min-width:100%;
+		padding:0;
+		@include transition(none);
+	}
+	.preloader {
+		display:none;
+		margin:-17px 0 0 -17px;
+		position:absolute;
+		left:50%;
+		top:50%;
+	}
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    input[type=password] {
+        -webkit-text-stroke-width: .2em;
+        letter-spacing: 0.2em;
+        text-indent:3px;
+    }
+}

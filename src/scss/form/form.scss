@@ -1,0 +1,91 @@
+// Form common
+.formRow {
+	margin-bottom: 25px;
+		&.error-row, &.error-row-email{
+			.floating-item-input{
+				border:1px solid $link-color;
+			}
+			.floating-item-label, 
+			.floating-item-input:focus ~ .floating-item-label{
+				color:$link-color;
+			}
+		}
+		.error-message{
+			background-color:$link-color;
+			color:$white;
+			font-size:12px;
+			padding:10px;
+		}
+}
+.info-message{
+	display: block;
+	padding-bottom:20px;
+}
+.form-wrap{
+	p{
+		font-size: 18px;
+		line-height: 26px;
+	}
+}
+.forgot{
+	font-size: 16px;
+	display: inline-block;
+	margin-bottom: 40px;
+}
+// Form common
+.form{
+	&-row {
+		display: block;
+		margin:15px 0 50px;
+			&.error-row{
+				.floating-item-label, 
+				.floating-item-input:focus ~ .floating-item-label{
+					color:red;
+				}
+			}
+			.error-message{
+				color:red;
+				display: none;
+				padding:7px 0 0;
+			}	
+		&.btm-reduce{
+			margin-bottom: 35px;
+		}	
+		&.remove-space{
+			margin-bottom: 30px;
+		} 
+		&.no-margin{
+			margin-bottom: 0;
+		}
+		.small-button{
+			margin-bottom: 0;
+		}
+	} 
+} 
+.input-item {
+	display: block;
+	line-height: 19px;
+	width: 100%;
+	background-color: transparent;
+}
+
+.load-content {
+	display:none;
+	&:first-child {
+		display: block;
+	}
+}
+.error-row{
+	.floating-item{
+		&:before{
+			background: red;
+			width: 100%;
+		}
+	} 
+}
+@media screen and(max-width: 640px){
+	.form-row{
+		margin-bottom: 60px; 
+		width: 100%;
+	}
+}

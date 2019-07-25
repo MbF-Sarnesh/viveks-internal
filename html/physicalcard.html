@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html class="homebg" lang="en">
+<head>	
+	<meta charset="utf-8">
+	<meta name="viewport" content="user-scalable=no,initial-scale=1,maximum-scale=1.0" />
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js" />
+	<title>My Account</title>
+	<!-- modernizr included -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+
+	<style>
+		body{
+			background-color: #fff;
+		}  
+		.render-blk{ opacity:0; }
+	</style>
+	<script>
+		var cssArr = ['css/app.css'];
+		for(var i = 0; i < cssArr.length; i++) {
+			var link = document.createElement('link');
+			link.setAttribute('rel', 'stylesheet');
+			link.setAttribute('type', 'text/css');
+			link.setAttribute('href', cssArr[i]);
+			document.getElementsByTagName('head')[0].appendChild(link);
+		}
+	</script>
+	<noscript>
+		<style media="screen">
+			.render-blk{ opacity: 1; }	
+		</style>
+	</noscript>
+</head> 
+<body>
+<div class="render-blk">
+	<div id="subPage" class="lightwhite-bg">
+		<!-- header start -->
+		<header class="home-header">
+			<div class="container">
+				<div class="header clearfix">
+					<nav class="clearfix">
+						<div class="col-5 left-nav">
+							<ul class="clearfix ">
+								<li class="dropdown"><a href="#" title="Shop">Shop</a></li>
+								<li><a href="#" title="Store Locatore">Store Locatore</a></li>
+								<li><a href="#" title="Contact Us">Contact Us</a></li>
+							</ul>
+						</div>
+						<div class="col-2 logo">
+							<a class="no-effect" href="index.html">
+								<img src="images/logo.png" alt="logos" />
+							</a>
+						</div>
+						<div class="col-5 right-nav">
+							<ul class="fR">
+								<li>
+									<a class="no-effect" href="#!">
+										<img src="images/search-icon.png" alt="search-icon" />
+									</a>
+								</li>
+								<li>
+									<a class="no-effect" href="#!">
+										<img src="images/gift-icon.png" alt="gift-icon" />
+									</a>
+								</li>
+								<li>
+									<a class="no-effect" href="#!">
+										<img src="images/shopcart-icon.png" alt="search-icon" />
+									</a>
+								</li>
+								<li>
+									<a class="no-effect" href="#!">
+										<img src="images/user-icon.png" alt="search-icon" />
+									</a>
+								</li>
+							</ul>
+						</div>
+					</nav>
+					<div class="menuHum">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div> 
+					<div class="mobiMenu">
+						<div class="menuHum">
+							<span></span>
+							<span></span>
+							<span></span>
+						</div> 
+						<ul>
+							<li><a href="#" title="Shop">Shop</a></li>
+							<li><a href="#" title="Discover">Discover</a></li>
+							<li><a href="#" title="Help">Help</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</header>
+		<section class="myaccount-section">
+			<div class="container">
+				<div class="row myaccount-heading">
+					<div class="col-12">
+						<div class="breadcrumbs clearfix nomobile">
+							<ul>
+								<li><a href="#" title="Home">Home</a></li>
+								<li><a href="#">Physical Card</a></li>
+							</ul>
+						</div>	
+						<div class="row">
+							<div class="col-10">
+								<div class="no-desc back-catagory"><a href="#"><i class="fa fa-angle-left" aria-hidden="true"></i>My Account</a></div>
+								<h1>Gift Cards</h1>
+					        </div>
+					        <div class="col-2">
+					        	<div class="form-row ">
+				              		<div class="button button-primary">
+				              			<button>CHECK BALANCE</button>
+				              		</div>
+				            	</div>
+					        </div>    
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-3 myaccount-tab">
+						<div class="myaccount-sidetab" >
+							<ul>
+								<li class="active" value="#physical">Physical Cards</li>
+								<li value="#e">E-Cards</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-9 myaccount-form ">
+						<div id="physical" class="tab-con active">
+							<h2>Physical Cards</h2>
+							<div class="row">
+								<div class="col-8">	
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
+								</div>
+								<div class="col-4 buy-card">
+				              		<div class="button button-secondary midium"> 
+					              		<button class="buy-physical">
+					              			BUY A CARD
+					              		</button> 
+					              	</div>
+								</div>
+							</div>
+							<div class="row gift-card">
+	            				<div class="col-4">
+	            					<img src="images/GiftCard1.png">
+	            				</div>
+	            				<div class="col-4">
+	            					<img src="images/GiftCard2.png">
+	            				</div>
+	            				<div class="col-4">
+	            					<img src="images/GiftCard3.png">
+	            				</div>
+	            				<div class="col-4">
+	            					<img src="images/GiftCard3.png">
+	            				</div>
+	            			</div>
+	            		</div>
+	            		<div id="e" class="tab-con">
+							<h2>E-Cards</h2>
+							<div class="row" >
+								<div class="col-8">	
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
+								</div>
+								<div class="col-4 buy-card">
+				              		<div class="button button-secondary midium"> 
+					              		<button class="buy-ecard">
+					              			BUY A CARD
+					              		</button> 
+					              	</div>
+								</div>
+							</div>
+							<div class="row gift-card">
+	            				<div class="col-4">
+	            					<img src="images/GiftCard1.png">
+	            				</div>
+	            				<div class="col-4">
+	            					<img src="images/GiftCard2.png">
+	            				</div>
+	            				<div class="col-4">
+	            					<img src="images/GiftCard3.png">
+	            				</div>
+	            				<div class="col-4">
+	            					<img src="images/GiftCard3.png">
+	            				</div>
+	            			</div>
+	            		</div>
+	            		<div class="buy-physical-con">
+							<h2>Buy a card</h2>
+							<div class="row">
+								<div class="col-8">	
+									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
+								</div>
+								<div class="col-4 buy-card"> 
+									<div class="button button-secondary midium">
+										<button class="phy-cancle">CANCLE</button>
+									</div>
+								</div>
+							</div>
+							<h3>Select your cards</h3>
+							<div class="row gift-card-buycard">
+	            				<div class="col-3">
+	            					<img src="images/GiftCard1.png">
+	            				</div>
+	            				<div class="col-3">
+	            					<img src="images/GiftCard2.png">
+	            				</div>
+	            				<div class="col-3">
+	            					<img src="images/GiftCard3.png">
+	            				</div>
+	            				<div class="col-3">
+	            					<img src="images/GiftCard3.png">
+	            				</div>
+	            			</div>
+	            			<div class="pagination">
+					        	<ul>
+					        		<li class="pag-arrow"><i class="fa fa-angle-left"></i></li>
+					        		<li class="pag-arrow"><i class="fa fa-angle-right"></i></li>
+					        	</ul>
+					        </div>
+		            		<h3>Card Features</h3>
+		            		<div class="row">
+		            			<div class="col-3 ">
+		            				<div class="row ">
+		            					<div class="col-6 features-card">
+		            						<p>cards</p>
+		            						<p>Type</p>
+		            						<p>Validity</p>
+		            						<p>Quantity</p>
+		            					</div>
+		            					<div class="col-6 features-card-normalcolor">
+		            						<p>Physical card</p>
+		            						<p>Best Wishes</p>
+		            						<p>1 Month</p>
+		            						<p>1 Card</p>
+		            					</div>
+		            				</div>
+		            			</div>
+		            		</div>
+		            		<div class="row">
+		            			<div class="col-6">
+		            				<h3>Select Amount</h3>
+		            				<div class="form-row acc-name">
+										<label class="floating-item" data-error="Please enter the Amount">
+											<input type="text"  class="floating-item-input input-item" name="firstname" value="" required />
+											<span class="floating-item-label">Amount</span>
+										</label>
+									</div>
+		            			</div>
+		            		</div>
+		            		<div class="row">
+		            			<div class="col-6">
+		            				<h3>Enter Details</h3>
+		            				<div class="form-row ">
+										<label class="floating-item" data-error="from">
+											<input type="text"  class="floating-item-input input-item" name="firstname" value="" required />
+											<span class="floating-item-label">From</span>
+										</label>
+									</div>
+									<h3>Reciptant</h3>
+									<div class="form-row">
+										<label class="floating-item" data-error="Name">
+											<input type="text"  class="floating-item-input input-item" name="firstname" value="" required />
+											<span class="floating-item-label">Name</span>
+										</label>
+									</div>
+									<div class="form-row">
+										<label class="floating-item" data-error="address1">
+											<input type="text"  class="floating-item-input input-item" name="firstname" value="" required />
+											<span class="floating-item-label">Address-1</span>
+										</label>
+									</div>
+									<div class="form-row ">
+										<label class="floating-item" data-error="address2">
+											<input type="text"  class="floating-item-input input-item" name="firstname" value="" required />
+											<span class="floating-item-label">Address-2</span>
+										</label>
+									</div>
+									<div class="form-row ">
+										<label class="floating-item" data-error="city">
+											<input type="text"  class="floating-item-input input-item" name="firstname" value="" required />
+											<span class="floating-item-label">City</span>
+										</label>
+									</div>
+									<div class="form-row">
+										<label class="floating-item" data-error="pincode">
+											<input type="text"  class="floating-item-input input-item" name="firstname" value="" required />
+											<span class="floating-item-label">Pincode</span>
+										</label>
+									</div>
+									<div class="form-row">
+										<label class="floating-item" data-error="State">
+											<input type="text"  class="floating-item-input input-item" name="firstname" value="" required />
+											<span class="floating-item-label">State</span>
+										</label>
+									</div>
+									<div class="form-row acc-name">
+										<label class="floating-item" data-error="Country">
+											<input type="text"  class="floating-item-input input-item" name="firstname" value="" required />
+											<span class="floating-item-label">Country</span>
+										</label>
+									</div>
+									<div class="form-row">
+										<label class="floating-item" data-error="Mobile Number">
+											<input type="text"  class="floating-item-input input-item" name="firstname" value="" required />
+											<span class="floating-item-label">Mobile Number</span>
+										</label>
+									</div>
+									<div class="form-row">
+										<label class="floating-item" data-error="Message">
+											<input type="text"  class="floating-item-input input-item" name="firstname" value="" required />
+											<span class="floating-item-label">Message</span>
+										</label>
+									</div>
+		            			</div>
+		            		</div>
+		            		<div class="row">
+		            			<div class="col-8">
+		            				<h4>Priview</h4>
+	        						<div class="pirview-card">
+	        							<div class="row">
+	        								<div class="col-6">
+		            							<img src="images/GiftCard1.png">
+		            						</div>
+		            						<div class="col-3">
+				            					<div class="features-card">From</div><p>xxxxxx</p>
+				            					<!-- <p>xxxxx</p> -->
+				            					<div class="features-card">Message</div>
+				            					<p>xxxxx<br>xxxxx</p>
+		            						</div>
+				            				<div class="col-3 featurecard-name">
+				            					<p>Patrik Cruz</p>
+				            					<div class="features-card">Wishes From</div>
+				            				</div>
+										</div>
+		            				</div>
+		            				<div class="button button-primary giftcard-btn">
+										<button>PROCEED TO PAY</button>
+									</div>		
+		            			</div>
+		            		</div>
+		            		<div class="row">
+		            			<div class="col-10">
+		            				<h4>Terms and Conditions</h4>
+		            				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+		            				<div class="list-tag-color">
+			            				<ul>
+			            					<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</li>
+			            					<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</li>
+			            					<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</li>
+			            					<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</li>
+			            				</ul>
+		            				</div>
+		            			</div>
+		            		</div>
+	            		</div>
+	            		<div class="buy-ecard-con">
+								<h2>Buy a card</h2>
+								<div class="row">
+									<div class="col-8">	
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim.</p>
+									</div>
+									<div class="col-4 buy-card"> 
+										<div class="button button-secondary midium">
+											<button class="e-cancle">CANCLE</button>
+										</div>
+									</div>
+								</div>
+								<h4>Select your cards</h4>
+								<div class="row gift-card">
+		            				<div class="col-3">
+		            					<img src="images/GiftCard1.png">
+		            				</div>
+		            				<div class="col-3">
+		            					<img src="images/GiftCard2.png">
+		            				</div>
+		            				<div class="col-3">
+		            					<img src="images/GiftCard3.png">
+		            				</div>
+		            				<div class="col-3">
+		            					<img src="images/GiftCard3.png">
+		            				</div>
+		            			</div>
+		            			<div class="pagination">
+						        	<ul>
+						        		<li class="pag-arrow"><i class="fa fa-angle-left"></i></li>
+						        		<li class="pag-arrow"><i class="fa fa-angle-right"></i></li>
+						        	</ul>
+						        </div>
+		            		<h4>Card Features</h4>
+		            		<div class="row">
+		            			<div class="col-3">
+		            				<div class="row ">
+		            					<div class="col-6 features-card">
+		            						<p>cards</p>
+		            						<p>Type</p>
+		            						<p>Validity</p>
+		            						<p>Quantity</p>
+		            					</div>
+		            					<div class="col-6">
+		            						<p>Physical card</p>
+		            						<p>Best Wishes</p>
+		            						<p>1 Month</p>
+		            						<p>1 Card</p>
+		            					</div>
+		            				</div>
+		            			</div>
+		            		</div>
+		            		<div class="row">
+		            			<div class="col-6">
+		            				<h3>Select Amount</h3>
+		            				<div class="form-row acc-name">
+										<label class="floating-item" data-error="Please enter the Amount">
+											<input type="text"  class="floating-item-input input-item" name="firstname" value="" required />
+											<span class="floating-item-label">Amount</span>
+										</label>
+									</div>
+		            			</div>
+		            		</div>
+		            		<div class="row">
+		            			<div class="col-6">
+		            				<h3>Enter Details</h3>
+		            				<div class="form-row ">
+										<label class="floating-item" data-error="from">
+											<input type="text"  class="floating-item-input input-item" name="firstname" value="" required />
+											<span class="floating-item-label">From</span>
+										</label>
+									</div>
+									<h3>Reciptant</h3>
+									<div class="form-row">
+										<label class="floating-item" data-error="Name">
+											<input type="text"  class="floating-item-input input-item" name="firstname" value="" required />
+											<span class="floating-item-label">Name</span>
+										</label>
+									</div>
+									<div class="form-row">
+										<label class="floating-item" data-error="address1">
+											<input type="text"  class="floating-item-input input-item" name="firstname" value="" required />
+											<span class="floating-item-label">Address-1</span>
+										</label>
+									</div>
+									<div class="form-row ">
+										<label class="floating-item" data-error="address2">
+											<input type="text"  class="floating-item-input input-item" name="firstname" value="" required />
+											<span class="floating-item-label">Address-2</span>
+										</label>
+									</div>
+									<div class="form-row ">
+										<label class="floating-item" data-error="city">
+											<input type="text"  class="floating-item-input input-item" name="firstname" value="" required />
+											<span class="floating-item-label">City</span>
+										</label>
+									</div>
+									<div class="form-row">
+										<label class="floating-item" data-error="pincode">
+											<input type="text"  class="floating-item-input input-item" name="firstname" value="" required />
+											<span class="floating-item-label">Pincode</span>
+										</label>
+									</div>
+									<div class="form-row">
+										<label class="floating-item" data-error="State">
+											<input type="text"  class="floating-item-input input-item" name="firstname" value="" required />
+											<span class="floating-item-label">State</span>
+										</label>
+									</div>
+									<div class="form-row acc-name">
+										<label class="floating-item" data-error="Country">
+											<input type="text"  class="floating-item-input input-item" name="firstname" value="" required />
+											<span class="floating-item-label">Country</span>
+										</label>
+									</div>
+									<div class="form-row">
+										<label class="floating-item" data-error="Mobile Number">
+											<input type="text"  class="floating-item-input input-item" name="firstname" value="" required />
+											<span class="floating-item-label">Mobile Number</span>
+										</label>
+									</div>
+									<div class="form-row">
+										<label class="floating-item" data-error="Message">
+											<input type="text"  class="floating-item-input input-item" name="firstname" value="" required />
+											<span class="floating-item-label">Message</span>
+										</label>
+									</div>
+		            			</div>
+		            		</div>
+		            		<div class="row">
+		            			<div class="col-8">
+		            				<h3>Priview</h3>
+	        						<div class="pirview-card">
+	        							<div class="row">
+	        								<div class="col-6">
+		            							<img src="images/GiftCard1.png">
+		            						</div>
+		            						<div class="col-3">
+				            					<div class="features-card">From</div><p>xxxxxx</p>
+				            					<!-- <p>xxxxx</p> -->
+				            					<div class="features-card">Message</div>
+				            					<p>xxxxx<br>xxxxx</p>
+		            						</div>
+				            				<div class="col-3 featurecard-name">
+				            					<p>Patrik Cruz</p>
+				            					<div class="features-card">Wishes From</div>
+				            				</div>
+										</div>
+		            				</div>
+		            				
+		            				<div class="button button-primary giftcard-btn">
+										<button>PROCEED TO PAY</button>
+									</div>		
+		            			</div>
+		            		</div>
+		            		<div class="row">
+		            			<div class="col-10">
+		            				<h3>Terms and Conditions</h3>
+		            				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</p>
+		            				<div class="list-tag-color">
+			            				<ul>
+			            					<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</li>
+			            					<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</li>
+			            					<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</li>
+			            					<li>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut</li>
+			            				</ul>
+		            				</div>
+		            			</div>
+		            		</div>
+	            		</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer>
+			<div class="container">
+				<div class="row aligncontent">
+					<div class="col-3 copyright">
+						<div class="footeritems">
+							<a class="mob-show no-effect" href="#!">
+								<img src="images/logo.png" />	
+							</a>
+							<a class="mob-hide no-effect" href="#!">
+								<img src="images/foot-logo.png" />
+							</a>
+							<p> &copy; 2019 Viveks. All right reserved.</p>
+						</div>
+						<p>New No 68, Old No 150, 2nd Floor,<br/> Luz Church Road, Mylapore, Chennai,<br/> Tamil Nadu 600004</p>
+						<div class="socilogo">
+							<a href="#!" class="no-effect"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+							<a href="#!" class="no-effect"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+						</div>
+					</div>
+					<div class="col-5 footerhide">
+						<div class="listfooter">
+							<ul class="clearfix">
+								<li>
+									<a href="#">ABOUT US</a>
+								</li>
+								<li>
+									<a href="#">MY ACCOUNT</a>
+								</li>
+								<li>
+									<a href="#">TERMS OF SALE</a>
+								</li>
+                                <li>
+                                	<a href="#">MY ORDERS</a>
+                                </li>
+                                <li>
+                                	<a href="#">RETURN POLICY</a>
+                                </li>
+                                <li>
+                                	<a href="#">CONTACT US</a>
+                                </li>
+								<li>
+									<a href="#">PRIVACY POLICY</a>
+								</li>
+                                <li>
+                                	<a href="#">BLOG</a>
+                                </li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-4 footerhide emailtext">
+						<p>Sign up to get exclusive offers.</p>
+						<div class="emailpartinput">
+							<input type="text"  name="fff" placeholder="Enter your email address">
+							<button type="button">SIGNUP</button>
+						</div>
+						<div class="payment-icon-con">
+							<ul>
+								<li>
+									<div class="payment-icon">
+										<img src="images/pay1.png">
+									</div>
+								</li>
+								<li>
+									<div class="payment-icon">
+										<img src="images/pay2.png">
+									</div>
+								</li>
+								<li>
+									<div class="payment-icon">
+										<img src="images/pay3.png">
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer> 
+	</div>
+</div>
+<script>
+  	var jsArr = ['js/app.js'];
+	for(var j = 0; j < jsArr.length; j++) {
+        var script = document.createElement('script')
+        script.setAttribute('type', 'text/javascript')
+        script.setAttribute('src', jsArr[j])
+        document.getElementsByTagName('head')[0].appendChild(script)
+    }
+</script>
+
+</body>
+</html>
