@@ -50,54 +50,19 @@
   cursor: pointer;
   color: $black;
   &.slick-prev{
-    left: -12px;
+    left: 0;
   }
   &.slick-next{
-    right: -12px;
+    right: 0;
   }
   &.slick-disabled{
     color: $gray;
     pointer-events: none;
   }
 }
-.slick-arrow-round {
-  border: none;
-  background-color: $white;
-  border-radius: 100%;
-  height: 40px;
-  width: 40px;
-  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.12);
-    
-  &:hover{
-    box-shadow: 0 2px 8px 0 rgba(0,0,0,0.12);
-    background-color: #EC1C24;
-    .fa {
-      color: $white;
-    }
-  }
-  .fa {
-    color: #EC1C24;
-    font-size: 24px;
-    position: absolute;
-    top: 7px;
-    left: 18px;
-  }
-  .fa-angle-left {
-    left: 16px;
-  }
-}
-
-.accordiantab-content {
-  .slick-arrow {
-    top: 44%;
-  }
-}
 
 @media screen and(max-width: 1024px){
   .slick-dots li{
     margin-left: 0px !important;
-  }
-  .slick-arrow.slick-disabled {
-    display: none !important;
   }
 }

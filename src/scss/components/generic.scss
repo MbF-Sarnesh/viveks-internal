@@ -1,4 +1,7 @@
 #subPage{
+	header{
+		margin-bottom: 15px;
+	}
 	.banner-card{
 		margin-bottom: 0;
 	}
@@ -78,7 +81,7 @@
       display: inline-block;
     }
     label{
-      font-family: $nunito-bold;
+      font-family: $quicksand-bold;
       margin-right: 10px;
       font-size: 15px;
       top: 2px;
@@ -263,7 +266,11 @@
       
     }
   }
+  .button-small button, .button-small a {
+     min-width: 140px; 
+     padding: 15px;
 
+}
 .blockquote{
   p{
      font-size: 25px;

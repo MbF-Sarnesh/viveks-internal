@@ -2,12 +2,11 @@
 	text-align: center;
 	background: white;
 	p{
+		color: $darkCeruleanBlue;
 		padding-bottom: 15px;
 		font-family: $nunito-bold;
-		font-size: 35px;
-		color: #262626;
-		letter-spacing: -1px;
-		line-height: 42px;
+		font-size: 15px;
+		line-height: 21px;
 	}
 	.view_btn{
 		padding-top:35px;
@@ -16,7 +15,7 @@
 			color: $white;
 			background: $darkCeruleanBlue;
 			padding: 20px 60px;
-			font-family: $nunito-bold;
+			font-family: $quicksand-bold;
 			font-size: 16px;
 			line-height: 22px;
 			border-radius: 5px;
@@ -24,8 +23,8 @@
 	}
 	
 }
-.equalizer {
-	padding-bottom: 100px;
+.section-brand{
+	padding: 66px 0px;
 }
 .row.type-2{
 	margin: 0px -1px;
@@ -44,29 +43,22 @@
 	
 }
 .brand_card{
-	display: block;
+	background: $body-bg;
 	height: 100%;
 	width: 100%;
-	padding-bottom: 40px;
 }
 
 
 
 @media screen and(max-width: 1024px){
-	.equalizer {
-		padding-bottom: 50px;
+	.section-brand{
+		padding: 30px 0px 0px;
 	}
 	.brand_section{
 		.view_btn{
 			padding:20px 0px; 
 			a{	
 			}
-		}
-		.row.type-2 [class*='col-'] {
-			max-width: 33.33%;
-		}
-		P {
-			font-size: 30px;
 		}
 	}
 	.row.type-2{
@@ -88,11 +80,7 @@
 			padding-top: 2px;
 		}
 	}
-	.brand_card{
-		padding: 5px;
-	}
 }
-
 @media screen and (max-width: 480px){
 	.row.type-2{
 		/*[class*='col-']{

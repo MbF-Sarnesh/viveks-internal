@@ -32908,71 +32908,19 @@ var app = (function() {
             myAccountAccordTab();
             _address();
             _cardSection();
-            _mobileMenuHandler();
-            _menuSlide();
-            _shopCatagory();
-            _searchHandler();
+            _paymentCrad();
+            
         },
-        _searchHandler= function(){
-            $(".search-icon").on('click', function(e){
-                e.preventDefault();
-                $('.hide-onsearch').fadeOut('fast', function(){
-                    $('.search-wrapper').fadeIn();
-                });
-                $('header').addClass("search-active");
-            });
-            $(".search-close").on('click', function(e){
-                e.preventDefault();
-                $('.search-wrapper').fadeOut('fast', function(){
-                    $('.hide-onsearch').fadeIn();
-                });
-                $('header').removeClass("search-active");
-                $('.search-box').val('');
-                $('.search-result').slideUp();
-            });
-            $('.search-box').keyup(function(){
-                $('.search-wrapper').addClass('active');
-                var sval=$(this).val();
-                if(sval==''){
-                    $('.search-result').slideUp();
-                }else{ 
-                    $('.search-result').slideDown();
+        _paymentCrad=function(){
+            $('.checkboxradio .head').on('click', function(){
+                if(!$(this).hasClass('active')){
+                    $('.checkboxradio .head').removeClass('active');
+                    $(".checkboxradio .payment-details").stop(true, true).slideUp();
+                    $(this).addClass('active');
+                    $(this).next(".payment-details").slideDown();
                 }
             });
         },
-        _menuSlide = function() {
-            $('.dropdown').click(function(){
-                if($('.dropdown').hasClass('classOne')){
-                   $('.dropdown').removeClass('classOne')
-                }else{
-                  $('.dropdown').addClass('classOne')
-                }
-                $('.mega-menu').slideToggle('slow').toggleClass('classOne');
-            });
-        },
-        _mobileMenuHandler = function() {
-            $('.mobiMenu li > a').on('click', function(){
-               //$(this).toggleClass('on');
-               // $(this).parent('li').find('.sub-nav').slideToggle().toggleClass('active');
-               if (!$(this).hasClass('slides')) {
-                   $('.mobiMenu li a').removeClass('slides');
-                   $(".sub-nav").stop(true, true).slideUp('slow').removeClass('active');
-                   $(this).addClass('slides');
-                   $(this).siblings(".sub-nav").slideDown('slow').toggleClass('active');
-               } else {
-                   $('.mobiMenu li a').removeClass('slides');
-                   $(".sub-nav").stop(true, true).slideUp('slow').removeClass('active');
-               }
-           });
-        },
-         _shopCatagory = function(){
-            $('.mega-menu-tab a').on('click', function(e)  {
-              e.preventDefault();
-              var currentAttrValue = $(this).attr('href');
-              $(this).parent('li').addClass('active').siblings().removeClass('active');
-              $(currentAttrValue).fadeIn(800).siblings('.mega-menu-items').hide();
-            });
-          },
         _cardSection=function(){
             $('.buy-physical').on('click', function(){
                 $(".buy-physical-con").fadeIn(800).siblings().hide();
@@ -33030,23 +32978,22 @@ var app = (function() {
         },
         _discriptionSlider=function(){
             $('.discription_card-slider').slick({
+              dots: true,
               infinite: false,
               speed: 300,
               slidesToShow: 3,
               slidesToScroll: 1,
               rows:0,
-              // prevArrow: '<button class="slideArrow slick-prev"><img src="images/slideArrow.png"></button>',
-              // nextArrow: '<button class="slideArrow slick-next"><img src="images/slideArrow.png"></button>', 
-                prevArrow: '<button class="slick-arrow-round slick-prev"><i class="fa fa-angle-left"></i></button>',
-                nextArrow: '<button class="slick-arrow-round slick-next"><i class="fa fa-angle-right"></i></button>', 
+              prevArrow: '<button class="slideArrow slick-prev"><img src="images/slideArrow.png"></button>',
+              nextArrow: '<button class="slideArrow slick-next"><img src="images/slideArrow.png"></button>', 
               responsive: [
                 {
                   breakpoint: 1025,
                   settings: {
-                    dots:false,
                     slidesToShow: 1,
                     slidesToScroll: 1,
                     infinite: false,
+                    arrows:false,
                   }
                 },
                 // {
@@ -33165,61 +33112,6 @@ var app = (function() {
               });
 
             });
-            $('.home-banner-slider').not('.slick-initialized').slick({
-                autoplay:true,
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                arrows: false,
-                dots:true,
-                fade: true,
-                rows:0,
-            });
-
-            $('.product-offer-slider').each(function(key, item) {
-
-              var sliderIdName = 'product-slider' + key;
-
-              this.id = sliderIdName; 
-
-              var sliderId = '#' + sliderIdName;
-              $(sliderId).not('.slick-initialized').slick({
-                arrows:true,
-                prevArrow: '<button class="slick-arrow-round slick-prev"><i class="fa fa-angle-left"></i></button>',
-                nextArrow: '<button class="slick-arrow-round slick-next"><i class="fa fa-angle-right"></i></button>', 
-                rows:0,
-                dots: false,
-                infinite: false,
-                speed: 300,
-                slidesToShow: 4,
-                slidesToScroll: 4,
-                responsive: [
-                {
-                  breakpoint: 1024,
-                  settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3,
-                    infinite: true,
-                  }
-                },
-                {
-                  breakpoint: 764,
-                  settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2
-                  }
-                },
-                {
-                  breakpoint: 480,
-                  settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                  }
-                }
-              ]
-              });
-            });
-
-            
 
             if($(window).width() <= 1024) {
                 // accordion handler
@@ -33235,8 +33127,8 @@ var app = (function() {
                         }, 'slow', function() {
                             // Animation complete.
                             currnetPanelContent.slideDown();
-                            $('.product-offer-slider').slick('refresh');
                         });
+                       
                   }else{
                        $('.accordiantab h4,.accordiantab .accordiantab-title').removeClass('active');
                        $(".accordiantab-content").stop(true, true).slideUp();
@@ -33264,7 +33156,6 @@ var app = (function() {
                     $('.tab-list li a').removeClass('active');
                     $(this).addClass('active');
                     $(currentAttrValue).fadeIn(800).siblings().hide();
-                    $('.product-offer-slider').slick('refresh');
                 });
             }
 
@@ -33421,7 +33312,7 @@ var app = (function() {
             })
 
             $("#homePage, #subPage").delay(500).animate({opacity:1},{duration:800});
-            // $('.logo').animate({'opacity':1}, 1500);
+            $('.logo').animate({'opacity':1}, 1500);
 
             // before css
             $('.generic-list ul').prev('p').css('padding-bottom', '3px');
@@ -33449,9 +33340,6 @@ var app = (function() {
                 $('body, header, .menuHum').toggleClass('open');
             }); 
 
-            $('.card_top').on('click', function(){
-                 $(this).toggleClass('active');
-            });
             // submenu open
             $('.submenu a').on('click', function(){
                 $(this).parent().addClass('open');

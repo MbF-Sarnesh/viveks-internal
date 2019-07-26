@@ -19,11 +19,98 @@
     width: 400px;
 }
 .headersignup{
-		padding: 0px 55px;
+		padding: 0px 38px;
+		margin-bottom: 20px;
+		h1{
+			padding-bottom: 30px;
+
+		}
 }
 .checkbox-label{
 	a{
 		color: $header-bg;
 	}
 }
+.social-logobtn{
+	button{
+		background-color: #39559F;
+		margin-right: 20px;
+	}
+	i{
+		font-family: $line-awesome;
+		font-style: normal;
+		margin-right: 15px;
+	}
+}
+.social-logobtn{
+
+	button:hover{
+		border:1px solid #39559F;
+		color: #39559f;
+	}
+}
+.social-logobtn-red{
+	button{
+		background-color: #DF4C38;
+		min-width: 224px;
+		i{
+
+			font-family: $line-awesome;
+			font-style: normal;
+			margin-right: 15px;
+			letter-spacing: 1px;
+		}
+	}
+}
+.social-logobtn-red{
+	button:hover{
+		border:1px solid #DF4C38;
+		color: #DF4C38;
+	}
+}
+.line-or-text{
+	margin-top: -20px;
+	margin-bottom: 50px;
+	h6{
+		width: 500px; 
+	   	text-align: center; 
+		border-bottom: 1px solid #aaa; 
+	   	line-height: 0.1em;
+	  	margin: 10px 0 20px; 
+	  	padding: 0px;
+	}
+	span { 
+    background:#fff; 
+    padding:0 10px;   
+    color: #aaa;
+	}
+}
+.breadcrumbs {
+    padding: 3px 38px 60px;
+    	li{
+		&:first-child{
+			a{
+	   			color: $header-bg;
+	   		}
+		}
+	}
+}
+
+.checkbox-row{
+	margin-bottom: 30px;
+}
+@media screen and (max-width: 640px) {
+    .line-or-text{
+        h6{
+            width: 100%;
+        }
+    }
+	.button{
+		margin-bottom: 15px;
+		display: block;
+	}   
+}
+
+
+
 
