@@ -206,6 +206,9 @@
 	}
 	.hero{
 		&-banner{
+			&-intro{
+			    padding: 0px 15px 10px;
+			}
 			&-content{
 				height: calc(90vh - 111px);
 				img{
@@ -213,9 +216,11 @@
 				}
 			}
 			&-caption{
-				@include align-items(center);
+				@include align-items(flex-start);
 				left: 0px;
 				bottom:150px;
+				max-width: 100%;
+				text-align: left;
 				h1{
 					font-size: 30px;
 					line-height: 36px;
@@ -226,7 +231,8 @@
 				}
 			}
 			&-price{
-				padding-right: 20px;
+				padding-left: 15px;
+				padding-right: 15px;
 			}
 		}
 	}

@@ -195,12 +195,30 @@
 	.mega-menu { 
 		display: block;
 		position: unset;
+		ul{
+			padding: 0px;
+			overflow-x: auto;
+			@include justify-content(flex-start);
+		}
 		&-tab {
-			overflow-x: scroll;
+    		height: auto;
 			li {
-				margin: 0px 15px;
+				margin: 0px;
 				flex: 0 0 auto;
 				max-width: initial;
+				padding: 0 20px;
+				a {
+					padding: 10px 0px;
+				}
+				&:after{
+				    width: auto; 
+				    left: 20px;
+				    right: 20px;
+				    bottom: 0px;
+				}
+			}
+			&:before{
+				display: none;
 			}
 		}
 		&-items {
