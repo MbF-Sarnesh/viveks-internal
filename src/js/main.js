@@ -27,7 +27,43 @@ var app = (function() {
             myAccountAccordTab();
             _address();
             _cardSection();
+            _mobileMenuHandler();
+            _menuSlide();
+            _shopCatagory();
         },
+        _menuSlide = function() {
+            $('.dropdown').click(function(){
+                if($('.dropdown').hasClass('classOne')){
+                   $('.dropdown').removeClass('classOne')
+                }else{
+                  $('.dropdown').addClass('classOne')
+                }
+                $('.mega-menu').slideToggle('slow').toggleClass('classOne');
+            });
+        },
+        _mobileMenuHandler = function() {
+            $('.mobiMenu li > a').on('click', function(){
+               //$(this).toggleClass('on');
+               // $(this).parent('li').find('.sub-nav').slideToggle().toggleClass('active');
+               if (!$(this).hasClass('slides')) {
+                   $('.mobiMenu li a').removeClass('slides');
+                   $(".sub-nav").stop(true, true).slideUp('slow').removeClass('active');
+                   $(this).addClass('slides');
+                   $(this).siblings(".sub-nav").slideDown('slow').toggleClass('active');
+               } else {
+                   $('.mobiMenu li a').removeClass('slides');
+                   $(".sub-nav").stop(true, true).slideUp('slow').removeClass('active');
+               }
+           });
+        },
+         _shopCatagory = function(){
+            $('.mega-menu-tab a').on('click', function(e)  {
+              e.preventDefault();
+              var currentAttrValue = $(this).attr('href');
+              $(this).parent('li').addClass('active').siblings().removeClass('active');
+              $(currentAttrValue).fadeIn(800).siblings('.mega-menu-items').hide();
+            });
+          },
         _cardSection=function(){
             $('.buy-physical').on('click', function(){
                 $(".buy-physical-con").fadeIn(800).siblings().hide();
