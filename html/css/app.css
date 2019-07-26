@@ -20103,7 +20103,7 @@ footer {
   height: auto;
   color: #ffffff;
   margin: 0px -10px;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
   flex-wrap: nowrap; }
   .gallery_section .row.type-0 h2 {
     color: #ffffff;
@@ -20130,6 +20130,7 @@ footer {
       object-position: center; }
     .gallery_section .row.type-0 .card-left-banner .main_con {
       position: relative;
+      display: block;
       height: 600px;
       max-height: 600px; }
       .gallery_section .row.type-0 .card-left-banner .main_con .title {
@@ -20183,7 +20184,7 @@ footer {
               color: #262626; }
 
 .section-gallery {
-  padding: 100px 0px 70px 0px; }
+  padding: 100px 0px 80px 0px; }
 
 @media screen and (max-width: 1024px) {
   .section-gallery {
