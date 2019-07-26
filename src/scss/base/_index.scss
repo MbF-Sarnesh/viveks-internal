@@ -336,12 +336,115 @@ iframe{
 .space-bottom {
     padding-bottom: 75px;
 }
+.tile-border {
+    background: #fff;
+    @include box-shadow(0px 2px 16px 0px rgba(0, 0, 0, 0.08));
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin-bottom: 0;
+    @include opacity (0);
+    @include transform(scale(0.98));
+    @include transition(all 0.3s ease 0s);
+    z-index: -1;
+    visibility: hidden;
+}
+.tile-wrapper:hover{
+  .tile-border {
+    @include opacity (1);
+    @include transform(scale(1));
+    @include transition(opacity 0.3s ease 0s, visibility 0s ease 0s, transform 0.3s ease 0s, -webkit-transform 0.3s ease 0s);
+    visibility: visible;
+  }
+} 
+.anim-border{
+  position: relative;
+  &:before,&:after {
+    content: "";
+    display: block;
+    position: absolute;
+    @include transition(all 0.8s ease 0s);
+    opacity: 0;
+    filter: alpha(opacity=0);
+    width: 0;
+    height: 0;
+    z-index: -1;
+  }
+  &:before {
+    border-right: 1px solid $crimsonRed;
+    border-bottom: 1px solid $crimsonRed;
+    bottom: 0;
+    right: 0;
+  }
+  &:after {
+    border-left: 1px solid $crimsonRed;
+    border-top: 1px solid $crimsonRed;
+    top: 0;
+    left: 0;
+  }
+  &:hover{
+    &:before,&:after {
+      opacity: 1;
+      height: 100%;
+      width: 100%;
+      z-index: 1;
+    }
+  }
+}
+.banner-anim-border{
+  position: relative;
+  &:before,&:after {
+    content: "";
+    position: absolute;
+    z-index: 9;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    @include transition(all 0.5s ease-in-out);
+  }
+  &:before {
+    border-right: 1px solid $white;
+    border-left: 1px solid $white;
+    top: 10px;
+    right: 10px;
+    bottom: 10px;
+    left: 10px;
+    @include transform(scale(1,0));
+    @include transform-origin(center);
+  }
+  &:after {
+    border-bottom: 1px solid $white;
+    border-top: 1px solid $white;
+    top: 10px;
+    right: 10px;
+    bottom: 10px;
+    left: 10px;
+    @include transform(scale(0,1));
+    @include transform-origin(center);
+  }
+  &:hover{
+    &:before,&:after {
+      opacity: 1;
+      filter: alpha(opacity=100);
+      @include transform(scale(1));
+    }
+  }
+}
 @media screen and (max-width: 1024px) { 
   .mob-show{
     display: inline-block;
   }
   .mob-hide{
     display: none;
+  }
+  .tile-border {
+    @include box-shadow(none);
+  }
+  .banner-anim-border{
+    &:before,&:after {
+      display:none;
+    }
   }
 }
 @media screen and (max-width: 768px) {  

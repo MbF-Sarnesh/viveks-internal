@@ -7,6 +7,19 @@ header{
 		/*@include justify-content(space-between);*/
 		@include align-items(center);
 	}
+	.img-hover{
+        display: none;  
+    }
+    a,.search-close{
+        &:hover{
+            .img-hover{
+                display: inline-block;  
+            }       
+            .img-normal{
+                display: none;             
+            }
+        }
+    }
 }
 .home-header {
 	.container {

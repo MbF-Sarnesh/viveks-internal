@@ -32908,6 +32908,34 @@ var app = (function() {
             myAccountAccordTab();
             _address();
             _cardSection();
+            _searchHandler();
+        },
+        _searchHandler= function(){
+            $(".search-icon").on('click', function(e){
+                e.preventDefault();
+                $('.hide-onsearch').fadeOut('fast', function(){
+                    $('.search-wrapper').fadeIn();
+                });
+                $('header').addClass("search-active");
+            });
+            $(".search-close").on('click', function(e){
+                e.preventDefault();
+                $('.search-wrapper').fadeOut('fast', function(){
+                    $('.hide-onsearch').fadeIn();
+                });
+                $('header').removeClass("search-active");
+                $('.search-box').val('');
+                $('.search-result').slideUp();
+            });
+            $('.search-box').keyup(function(){
+                $('.search-wrapper').addClass('active');
+                var sval=$(this).val();
+                if(sval==''){
+                    $('.search-result').slideUp();
+                }else{ 
+                    $('.search-result').slideDown();
+                }
+            });
         },
         _cardSection=function(){
             $('.buy-physical').on('click', function(){

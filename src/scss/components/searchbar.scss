@@ -35,3 +35,119 @@
 		}
 	}
 }
+/* Search block start */
+.search {
+	&-wrapper{
+		display: none;
+	}
+	&-bar{
+		@include display-flex;
+		@include align-items(center);
+		@include justify-content(flex-end);
+	}
+	&-block {
+		display: inline-block;
+		background-color: $white;
+		/*border: 1px solid $submarineGray;*/
+		border: 1px solid #ccc;
+		letter-spacing: 1px;
+		position: relative;
+		@include width-height(460px, 36px);
+		@include transition-property(width);
+	    @include transition-duration(0.6s);
+	    @include transition-timing-function(ease-out);
+	    @include transition-delay(0.3s);
+	}
+	&-box, &-submit {
+		background-color: transparent;
+		border: none;
+		letter-spacing: 1px;
+		outline: none;
+	}
+	&-box {
+		padding: 0 72px 0 20px;
+		@include position(absolute, $top: 0, $right: 0, $bottom: 0, $left: 0);
+		@include width-height(100%, 100%);
+		@include placeholder {
+		    /*color: $submarineGray;*/
+		    color: #ccc;
+		    font-size:16px;
+		    /*font-family: $quicksand-regular;*/
+		    line-height: 20px;
+		    letter-spacing: 0px;
+		}
+	}
+	&-submit {
+		cursor: pointer;
+		height: 100%;
+		padding: 0 10px;
+		background-color: $primary-color;
+		@include position(absolute, $top: 0, $right: 0, $bottom: null, $left: null);
+		z-index: 1;
+		img{
+			width: 24px;
+			height: 24px;
+		}	
+	}
+	&-close{
+		padding-left: 60px;
+		display: inline-block;
+		cursor: pointer;
+		img{
+			width: 18px;
+			height: 18px;
+		}	
+	}
+	&-result{
+		background: #fff;
+		display: none;
+		margin-bottom: 0;
+		padding: 15px;
+		text-align: left;
+		z-index: 2;
+		@include position(absolute, $left: 0,$right: 0, $top: 35px);
+		@include box-shadow(0 2px 8px 0 rgba(0,0,0,0.20));
+		a{
+			/*font-family: $quicksand-regular;*/
+			line-height: 36px;
+			&,&:hover{
+				color: initial;
+			}
+		}
+	}
+	&-scroll{
+		max-height: 220px;
+    	overflow-y: auto;
+	}
+}
+@media screen and (max-width: 1024px) {
+	.search {
+		&-block {
+			width: 100%;
+			height: 31px;
+		}
+		&-box {
+			padding: 0 62px 0 15px;
+			@include placeholder {
+				font-size: 12px;
+				line-height: 18px;
+			}
+		}
+		&-submit {
+			img{
+				width: 18px;
+				height: 18px;
+			}	
+		}
+		&-close{
+			padding-left: 10px;
+			img{
+				width: 14px;
+				height: 14px;
+			}	
+		}
+		&-result{
+			top: 31px;
+		}
+	}
+}
