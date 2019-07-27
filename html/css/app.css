@@ -17276,7 +17276,8 @@ p {
   padding-top: 80px; }
 
 h1, h2, h3, h4, h5, h6 {
-  font-weight: normal; }
+  font-weight: normal;
+  color: #262626; }
 
 h2, h4 {
   padding-top: 7px; }
@@ -17287,8 +17288,7 @@ h3 {
 h3, h4, h5 {
   padding-bottom: 5px; }
 
-h1, h2, h3, h4 {
-  color: #262626;
+h1, h2, h3 {
   font-family: "Nunito-Bold", sans-serif; }
 
 h1 {
@@ -17308,18 +17308,20 @@ h3 {
   line-height: 31px; }
 
 h4 {
-  font-size: 20px;
+  font-size: 18px;
+  font-family: "Nunito-Black", sans-serif;
   line-height: 26px; }
 
 h5 {
   font-size: 16px;
-  font-family: "Nunito-Bold", sans-serif;
+  font-family: "Nunito-SemiBold", sans-serif;
   line-height: 26px; }
 
 h6 {
   color: #262626;
   padding-bottom: 15px;
-  font-size: 13px;
+  font-size: 12px;
+  font-family: "Nunito-Black", sans-serif;
   line-height: 19px; }
 
 b, strong {
@@ -22373,10 +22375,21 @@ footer {
       /*justify-content: flex-end;*/
       text-align: right; } }
 
-.signup-section .input-adjust {
+.signup_section .input-adjust {
   background-color: #fff;
   padding: 40px;
-  margin-bottom: 60px; }
+  margin-bottom: 60px;
+  width: 800px; }
+
+.form-row {
+  display: block;
+  margin: 0 0 50px;
+  width: 460px; }
+
+.bottomtext {
+  padding-top: 25px;
+  padding-bottom: 25px a;
+    padding-bottom-color: red; }
 
 .input-item {
   width: 400px; }
@@ -22460,6 +22473,12 @@ footer {
 .headersignin {
   padding: 0px 38px;
   margin-bottom: 20px; }
+
+.signup_section .input-adjust {
+  background-color: #fff;
+  padding: 40px;
+  margin-bottom: 60px;
+  width: 800px; }
 
 .bottomtext-deliverypage a {
   color: #d32129; }

@@ -185,12 +185,14 @@ p {
 }
 
 
-h1,h2,h3,h4,h5,h6{ font-weight: normal;} 
+h1,h2,h3,h4,h5,h6{ 
+  font-weight: normal; 
+  color: $black;
+} 
 h2,h4{ padding-top: 7px;}
 h3{ padding-top: 10px;}
 h3,h4,h5 {padding-bottom: 5px;}
-h1, h2, h3, h4{ 
-  color: $black;
+h1, h2, h3{ 
   font-family: $nunito-bold;
 }
 h1{
@@ -210,18 +212,20 @@ h3{
   line-height: 31px;
 }
 h4{
-  font-size: 20px;
+  font-size: 18px;
+  font-family: $nunito-black;
   line-height: 26px;
 }
 h5{
   font-size: 16px;
-  font-family:$nunito-bold;
+  font-family:$nunito-semibold;
   line-height: 26px;
 }
 h6 { 
   color:$black; 
   padding-bottom:15px; 
-  font-size: 13px;
+  font-size: 12px;
+  font-family: $nunito-black;
   line-height: 19px;
 }
 b,strong { 
