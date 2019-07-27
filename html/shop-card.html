@@ -1,39 +1,41 @@
 <!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="user-scalable=no,initial-scale=1,maximum-scale=1.0" />
-		<link rel="shortcut icon" href="images/favicon.png"/>
-		<title>Viveks India - Generic</title>
-		<!-- modernizr included -->
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-		<style>
-			body{
-				background-color: #fff;
-			}  
-			.render-blk{ opacity:0; }
+<html class="homebg" lang="en">
+<head>	
+	<meta charset="utf-8">
+	<meta name="viewport" content="user-scalable=no,initial-scale=1,maximum-scale=1.0" />
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js" />
+	<title>Shop-card</title>
+	<!-- modernizr included -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+
+	<style>
+		body{
+			background-color: #fff;
+		}  
+		.render-blk{ opacity:0; }
+	</style>
+	<script>
+		var cssArr = ['css/app.css'];
+		for(var i = 0; i < cssArr.length; i++) {
+			var link = document.createElement('link');
+			link.setAttribute('rel', 'stylesheet');
+			link.setAttribute('type', 'text/css');
+			link.setAttribute('href', cssArr[i]);
+			document.getElementsByTagName('head')[0].appendChild(link);
+		}
+	</script>
+	<noscript>
+		<style media="screen">
+			.render-blk{ opacity: 1; }	
 		</style>
-		<script>
-			var cssArr = ['css/app.css'];
-			for(var i = 0; i < cssArr.length; i++) {
-				var link = document.createElement('link');
-				link.setAttribute('rel', 'stylesheet');
-				link.setAttribute('type', 'text/css');
-				link.setAttribute('href', cssArr[i]);
-				document.getElementsByTagName('head')[0].appendChild(link);
-			}
-		</script>
-		<noscript>
-			<style media="screen">
-				.render-blk{ opacity: 1; }	
-			</style>
-		</noscript>
-	</head>
-	<body class="subpage">
-		<div class="render-blk">
-			<div id="subPage" class="generic body-bg">
-				<!-- header start -->
-			<header class="home-header">
+	</noscript>
+</head> 
+
+<body>
+<div class="render-blk">
+	<div id="subPage" class="lightwhite-bg">
+		<!-- header start -->
+		<header class="home-header">
                     <div class="container">
                         <div class="header clearfix">
                             <nav class="clearfix">
@@ -344,202 +346,232 @@
                             </div>
                         </div>
                     </div>
-                </header>
-				<!-- sing up page start -->
-				<section>
-					<div class="container generic-container generic-list">
-						<div class="row">
-							<div class="col-7 col-center-block">
-								<div class="breadcrumbs clearfix nomobile">
-									<ul>
-										<li><a href="#" title="Home">Home</a></li>
-										<li><a href="#">Sign up</a></li>
-									</ul>
-								</div>	
-								<div class="headersignup">
-									<h1>Sign up</h1>
-									<p>Lorem Ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolor magna aliqua. Ut enim ad minim veniam.</p>			
-								</div>
-							</div>
-						</div>
+        </header>
+		<!-- my account body section start-->
+		<section class="shop-card-section" >
+			<div class="container">
+				<div class="row shop-card-heading">
+					<div class="col-8">
+						<div class="breadcrumbs clearfix nomobile">
+							<ul>
+								<li><a href="#" title="Home">Home</a></li>
+								<li><a href="#">My Account</a></li>
+							</ul>
+						</div>	
+						<div class="no-desc back-catagory"><a href="#"><i class="fa fa-angle-left" aria-hidden="true"></i>My Account</a></div>
+						<h1>Shopping Bag</h1>
 					</div>
-				</section>
-<<<<<<< HEAD
-				<section class="signup-page">
-					<div class="container generic-container generic-list">
-=======
-				<section class="signup-section">
-					<div class="container  generic-container generic-list">
->>>>>>> dev-sprint2-myaccount
-						<div class="row">
-							<div class="col-7 col-center-block">
-								<div class="col-12 input-adjust">
-									<div class="account-names d-flex" >
-
-										<div class="form-row acc-name">
-											<label class="floating-item" data-error="Please enter your firstname">
-												<input type="text"  class="floating-item-input input-item" name="firstname" value="" required />
-												<span class="floating-item-label">First name</span>
-											</label>
+					<div class="col-5">
+			            <p>The Fay Store’s mission is to help you make positive changes and learn more about the alternatives out there. Whether you’re looking for ideas, knowledge, or just some cool stuff – we’re here to inspire you!</p>
+			        </div>	
+				</div>
+				<div class="subwrap cart">
+					<table class="cart-table" width="100%" border="0" cellpadding="15">
+						<thead>
+							<tr>
+								<th class="product-name"> <h4>Product</h4></th>
+								<th > <h4>Quantity</h4></th>
+								<th > <h4>Unit Price</h4></th>
+								<th class="last"> <h4>Amount</h4></th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="cart_item clearfix cart-list">
+								<td class="product-name">
+									<div class="clearfix cart-list-blk">
+										<a href="#!">
+											<img src="images/ac.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="AC"  >
+										</a>
+										<div class="cart-title">
+											<a href="#!" class="proTitle">
+												<h5>Daikin ATKL50TV16U Split Air Conditioner
+												(1.5 ton, 3 star-Inverter)</h5>
+											</a>
 										</div>
-					            	</div>
-					            	<div class="account-names d-flex" >	
-										<div class="form-row acc-name">
-											<label class="floating-item" data-error="Please enter your Last name">
-												<input type="text"  class="floating-item-input input-item" name="Last tname" value="" required />
-												<span class="floating-item-label">Last name</span>
-											</label>
+									</div>
+									<a href="javascript:void(0)" title="Remove" class="remove-btn-no remove-btn">Remove</a>
+								</td>	
+								<td class="formCol" data-title="Quantity">
+									<div class="preloadtd qtymodify">
+										<button class="textbox-right">-</button>
+										<input id="dummyQty" type="text" readonly="" class="textbox-small input-email-active" value="2">
+										<button class="textbox-left">+</button>
+									</div>
+								</td>
+								<td data-title="Unit Price" class="product-subtotal sub-total">₹ 67,980</td>
+								<td data-title="Total price" class="product-subtotal sub-total last">₹ 67,980</td>
+							</tr>
+							<tr class="cart_item clearfix cart-list">
+								<td class="product-name">
+									<div class="clearfix cart-list-blk">
+										<a href="#!">
+											<img src="images/ac.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="AC"  >
+										</a>
+										<div class="cart-title">
+											<a href="#!" class="proTitle">
+												<h5>Daikin ATKL50TV16U Split Air Conditioner(1.5 ton, 3 star-Inverter)</h5>
+											</a>
 										</div>
-					            	</div>
-					            	<div class="account-names d-flex" >	
-										<div class="form-row acc-name">
-											<label class="floating-item" data-error="Please enter your Email address">
-												<input type="text"  class="floating-item-input input-item" name="Email Adderss" value="" required />
-												<span class="floating-item-label">Email Adderss</span>
-											</label>
-										</div>
-					            	</div>
-					            	<div class="account-names d-flex" >	
-										<div class="form-row acc-name">
-											<label class="floating-item" data-error="Please enter your Mobile number">
-												<input type="text"  class="floating-item-input input-item" name="Mobile number" value="" required />
-												<span class="floating-item-label">Mobile number</span>
-											</label>
-										</div>
-					            	</div>
-					            	<div class="checkbox-row">
-					            		<div class="checkboxradio-row">
-									      	<input class="checkboxradio-item checkboxradio-invisible input-email-active" id="checkbox0" name="newsletter" type="checkbox">
-									      	<label class="checkboxradio-label checkbox-label" for="checkbox0"> <p>I have read and agree to the <a href="#">Terms & Condiation</a> and <a href="#">Privacy Policy</a></p></label>
-						         		</div>
-						         		<div class="checkboxradio-row">
-									      	<input class="checkboxradio-item checkboxradio-invisible input-email-active" id="checkbox2" name="newsletter" type="checkbox">
-									      	<label class="checkboxradio-label checkbox-label" for="checkbox2"> I would like to opt in to receive your marketing communication</label>
-						         		</div>
-					            	</div>
-						         	<div class="form-row remove-space">
-					              		<div class="button button-primary midium">
-					              			<button>Submit</button>
-					              		</div>
-					              		<div class="bottomtext">
-					              			<p>Already have an account?<a href="#">Login</a></p>
-					              		</div>
-					            	</div>
-					            	<!-- social button add	 -->
-					            	<div class="row ">
-					            		<div class="col-8">
-					            			<div class="line-or-text">
-					            				<h6><span>OR</span></h6>					    
-				              				</div>
-					            		</div>
-	              					</div>
-		              					
-			            				<div class="button button-primary">
-        									<div class="social-logobtn">
-        										<button><i class="fab fa-facebook-square"></i>LOGIN WITH FACEBOOK</button>
-        									</div>
-          								</div>
-			            				<div class="button button-primary">
-            								<div class="social-logobtn-red">
-            									<button><i class="fab fa-google"></i>LOGIN WITH GOOGLE</button>
-            								</div>
-              							</div>
-					            			
-					            	<!-- social button end	 -->
-								</div>
-							</div>
+									</div>
+									<a href="javascript:void(0)"  class="remove-btn-no remove-btn">Remove</a>
+								</td>	
+								<td class="formCol" data-title="Quantity">
+									<div class="preloadtd qtymodify">
+										<button class="textbox-right">-</button>
+										<input id="dummyQty" type="text" readonly="" class="textbox-small input-email-active" value="2">
+										<button class="textbox-left">+</button>
+									</div>
+								</td>
+								<td data-title="Unit Price" class="product-subtotal sub-total">₹ 67,980</td>
+								<td data-title="Total price" class="product-subtotal sub-total last">₹ 67,980</td>
+							</tr>
+							<tr class="checkouttotal">
+		  						<td colspan="4" class="checkouttotaltd">
+		     						<div class="cart-collaterals">
+									</div>
+									<table class="discount-wrapper fR structure" cellspacing="0" cellpadding="0" border="0">
+							      		<tbody>
+							      			<tr>
+								     			<td id="carttd" colspan="2" class="voucher-pad">
+													<div class="common-discount">
+								 					    <div class="clearfix" id="voucherInner">
+														  	<div class="search-shop voucherCodeFiled">
+													 			<div class="addvoucher">
+													 				<i class="fa fa-plus" aria-hidden="true"></i> Add a voucher code
+													 			</div>
+									  							<div class="btn-pos applybutd">
+											                 	 	<input type="text" name="coupon_code" class="textBox" id="coupon_code" maxlength="99" value="" autocomplete="off">
+											               			<button type="button" class="button-primary btn button" id="discount-button" name="apply_coupon">Apply Code</button>
+											               			<div class="close-voucher"><i class="fa fa-times" aria-hidden="true"></i></div>
+											                  		<div class="tick-box"></div>
+											                      	<div class="preloader-black"></div>
+															  	</div>
+															</div>
+												        </div>
+										     		</div>
+								 		      	</td>
+										    </tr>
+											<tr class="woocommerce-shipping-totals shipping">
+												<th style="text-transform: none;">Shipping</th>
+												<td data-title="Shipping">
+													<ul>
+														<li>
+															<input type="radio" name="shipping_method[0]" data-index="0" id="shipping_method_0_free_shipping14" value="free_shipping:14" class="shipping_method input-email-active" checked="checked"><label for="shipping_method_0_free_shipping14">₹ 300</label>			
+														</li>
+												</ul>
+												</td>
+											</tr>
+											<tr class="total-blk">
+												<td><strong>TOTAL</strong></td>
+												<td class="last-total"> <strong><span>₹ 300</span></strong></td>
+											</tr>	
+								  		</tbody>
+									</table>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="clearfix checkout">
+						<div class="button button-primary fR">
+							<a href="#!" class="small-button">Checkout</a>
 						</div>
-					</div>
-				</section>
-				<!-- footer start-->
-				<div class="scroll-top"><a href="#" class="scroll-btn no-effect"><i class="fa fa-chevron-up" aria-hidden="true"></i></a></div>
-				<footer>
-                <div class="container">
-                    <div class="row aligncontent">
-                        <div class="col-3 copyright">
-                            <div class="footeritems">
-                                <a class="no-effect" href="#!">
-                                <img src="images/foot-logo.png" />
-                                </a>
-                                <p> &copy; 2019 Viveks. All right reserved.</p>
-                            </div>
-                            <p>New No 68, Old No 150, 2nd Floor,<br/> Luz Church Road, Mylapore, Chennai,<br/> Tamil Nadu 600004</p>
-                            <div class="socilogo">
-                                <a href="#!" class="no-effect"><i class="fa fa-facebook" aria-hidden="true"></i></a>
-                                <a href="#!" class="no-effect"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-                        <div class="col-5 footerhide">
-                            <div class="listfooter">
-                                <ul class="clearfix">
-                                    <li>
-                                        <a href="#">ABOUT US</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">MY ACCOUNT</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">TERMS OF SALE</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">MY ORDERS</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">RETURN POLICY</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">CONTACT US</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">PRIVACY POLICY</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">BLOG</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="col-4 emailtext">
-                            <p>Sign up to get exclusive offers.</p>
-                            <div class="emailpartinput">
-                                <input type="text"  name="fff" placeholder="Enter your email address">
-                                <button type="button">SUBMIT</button>
-                            </div>
-                            <div class="payment-icon-con">
-                                <ul>
-                                    <li>
-                                        <div class="payment-icon">
-                                            <img src="images/pay1.png" />
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="payment-icon">
-                                            <img src="images/pay2.png" />
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <div class="payment-icon">
-                                            <img src="images/pay3.png" />
-                                        </div>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </footer>
-				<!-- footer ends -->
+						<div class="button button-secondary">
+				        	<a href="#!">Continue Shopping</a>
+				    	</div>	
+	                </div>
+	            </div>
 			</div>
-		</div>	
-			<!-- JS script -->
-		<script>
-		  	var jsArr = ['js/app.js'];
-			for(var j = 0; j < jsArr.length; j++) {
-		        var script = document.createElement('script')
-		        script.setAttribute('type', 'text/javascript')
-		        script.setAttribute('src', jsArr[j])
-		        document.getElementsByTagName('head')[0].appendChild(script)
-		    }
-		</script>
-	</body>
+		</section>
+		<!-- my account body section ends-->
+		<footer>
+			<div class="container">
+				<div class="row aligncontent">
+					<div class="col-3 copyright">
+						<div class="footeritems">
+							<a class="mob-show no-effect" href="#!">
+								<img src="images/logo.png" />	
+							</a>
+							<a class="mob-hide no-effect" href="#!">
+								<img src="images/foot-logo.png" />
+							</a>
+							<p> &copy; 2019 Viveks. All right reserved.</p>
+						</div>
+						<p>New No 68, Old No 150, 2nd Floor,<br/> Luz Church Road, Mylapore, Chennai,<br/> Tamil Nadu 600004</p>
+						<div class="socilogo">
+							<a href="#!" class="no-effect"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+							<a href="#!" class="no-effect"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+						</div>
+					</div>
+					<div class="col-5 footerhide">
+						<div class="listfooter">
+							<ul class="clearfix">
+								<li>
+									<a href="#">ABOUT US</a>
+								</li>
+								<li>
+									<a href="#">MY ACCOUNT</a>
+								</li>
+								<li>
+									<a href="#">TERMS OF SALE</a>
+								</li>
+                                <li>
+                                	<a href="#">MY ORDERS</a>
+                                </li>
+                                <li>
+                                	<a href="#">RETURN POLICY</a>
+                                </li>
+                                <li>
+                                	<a href="#">CONTACT US</a>
+                                </li>
+								<li>
+									<a href="#">PRIVACY POLICY</a>
+								</li>
+                                <li>
+                                	<a href="#">BLOG</a>
+                                </li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-4 footerhide emailtext">
+						<p>Sign up to get exclusive offers.</p>
+						<div class="emailpartinput">
+							<input type="text"  name="fff" placeholder="Enter your email address">
+							<button type="button">SIGNUP</button>
+						</div>
+						<div class="payment-icon-con">
+							<ul>
+								<li>
+									<div class="payment-icon">
+										<img src="images/pay1.png">
+									</div>
+								</li>
+								<li>
+									<div class="payment-icon">
+										<img src="images/pay2.png">
+									</div>
+								</li>
+								<li>
+									<div class="payment-icon">
+										<img src="images/pay3.png">
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer> 
+	</div>
+</div>
+<script>
+  	var jsArr = ['js/app.js'];
+	for(var j = 0; j < jsArr.length; j++) {
+        var script = document.createElement('script')
+        script.setAttribute('type', 'text/javascript')
+        script.setAttribute('src', jsArr[j])
+        document.getElementsByTagName('head')[0].appendChild(script)
+    }
+</script>
+
+</body>
 </html>

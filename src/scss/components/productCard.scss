@@ -246,3 +246,8 @@
 		padding-top: 15px;
 	}
 }
+@media screen and (max-width: 480px) {
+	.card_con .card_img {
+		width: 100%;
+	}
+}

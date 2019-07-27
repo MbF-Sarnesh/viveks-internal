@@ -1,0 +1,929 @@
+<!DOCTYPE html>
+<html class="homebg" lang="en">
+	<head>	
+		<meta charset="utf-8">
+		<meta name="viewport" content="user-scalable=no,initial-scale=1,maximum-scale=1.0" />
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js" />
+		<title>Product-Details</title>
+		<!-- modernizr included -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+
+		<style>
+			body{
+				background-color: #fff;
+			}  
+			.render-blk{ opacity:0; }
+		</style>
+		<script>
+			var cssArr = ['css/app.css'];
+			for(var i = 0; i < cssArr.length; i++) {
+				var link = document.createElement('link');
+				link.setAttribute('rel', 'stylesheet');
+				link.setAttribute('type', 'text/css');
+				link.setAttribute('href', cssArr[i]);
+				document.getElementsByTagName('head')[0].appendChild(link);
+			}
+		</script>
+		<noscript>
+			<style media="screen">
+				.render-blk{ opacity: 1; }	
+			</style>
+		</noscript>
+	</head> 
+
+	<body>
+		<div class="render-blk">
+			<div id="subPage" class="lightwhite-bg">
+				<!-- header start -->
+				<div class="popup-section">
+		    		<div class="popup-content emi">
+		      		  	<img  class="close-icon" src="images/icon/close/white.svg" alt="close">
+		      		  	<div class="row">
+		      		  		<div class="col-11">
+				      		  	<h2>EMI payment plans</h2>
+				      		  	<p>Bank will convert the payment into EMI in 3-4 working days. To know more click on T&Cs.</p>
+				      		</div>
+				      		<div class="col-1">
+				    			<span class="text-red">T&C<small>s</small></span>
+				    		</div>
+			      		</div>
+		      		  	<div class="row">
+		  		  			<div class="col-12">
+		  		  				<div class="pro-tab">                 
+					            	<ul>
+					            		<li class="active" value="#standard"><h4>Standard EMI</h4></li>
+					            		<li value="#no-cost"> <h4>No Cost EMI</h4></li>
+					            	</ul>
+					           	</div>
+		  		  			</div>
+		      		  	</div>
+		      		  	<div>
+		      		  		<div id="standard" class="emi-con active">
+				      		  	<div class="row">
+				      		  		<div class="col-3 emi-tab">
+							  		  	<div class="sidetab" >
+											<ul>
+												<li class="active" value="#hdfc">HDFC</li>
+												<li value="#icici">ICICI</li>
+												<li value="#lab">PineLab</li>
+												<li value="#snap">Snapmint</li>
+											</ul>
+										</div>
+									</div>
+									<div class="col-9">
+										<div class="plan-con">
+											<div id="hdfc" class="emi-con active">
+												<table>
+													<thead>
+														<tr>
+															<th>
+																<h5>Plan (Monthly)</h5>
+															</th>
+															<th>
+																<h5>EMI</h5>
+															</th>
+															<th>
+																<h5>Total Cost</h5>
+															</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>3 EMIs @13% PM</td>
+															<td>Rs 15,837 (Interest Rs.1,011)</td>
+															<td>₹ 47,510</td>
+														</tr>
+														<tr>
+															<td>6 EMIs @13% PM</td>
+															<td>Rs 8,046 (Interest Rs.1,779)</td>
+															<td>₹ 48,278</td>
+														</tr>
+														<tr>
+															<td>9 EMIs @14% PM</td>
+															<td>Rs 5,473 (Interest Rs.2,754)</td>
+															<td>₹ 49,253</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<div id="icici" class="emi-con">
+												<table>
+													<thead>
+														<tr>
+															<th>
+																<h5>Plan (Monthly)</h5>
+															</th>
+															<th>
+																<h5>EMI</h5>
+															</th>
+															<th>
+																<h5>Total Cost</h5>
+															</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>3 EMIs @13% PM</td>
+															<td>Rs 15,837 (Interest Rs.1,011)</td>
+															<td>₹ 47,510</td>
+														</tr>
+														<tr>
+															<td>6 EMIs @13% PM</td>
+															<td>Rs 8,046 (Interest Rs.1,779)</td>
+															<td>₹ 48,278</td>
+														</tr>
+														<tr>
+															<td>9 EMIs @14% PM</td>
+															<td>Rs 5,473 (Interest Rs.2,754)</td>
+															<td>₹ 49,253</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<div id="lab" class="emi-con">
+												<table>
+													<thead>
+														<tr>
+															<th>
+																<h5>Plan (Monthly)</h5>
+															</th>
+															<th>
+																<h5>EMI</h5>
+															</th>
+															<th>
+																<h5>Total Cost</h5>
+															</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>3 EMIs @13% PM</td>
+															<td>Rs 15,837 (Interest Rs.1,011)</td>
+															<td>₹ 47,510</td>
+														</tr>
+														<tr>
+															<td>6 EMIs @13% PM</td>
+															<td>Rs 8,046 (Interest Rs.1,779)</td>
+															<td>₹ 48,278</td>
+														</tr>
+														<tr>
+															<td>9 EMIs @14% PM</td>
+															<td>Rs 5,473 (Interest Rs.2,754)</td>
+															<td>₹ 49,253</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+											<div id="snap" class="emi-con">
+												<table>
+													<thead>
+														<tr>
+															<th>
+																<h5>Plan (Monthly)</h5>
+															</th>
+															<th>
+																<h5>EMI</h5>
+															</th>
+															<th>
+																<h5>Total Cost</h5>
+															</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>3 EMIs @13% PM</td>
+															<td>Rs 15,837 (Interest Rs.1,011)</td>
+															<td>₹ 47,510</td>
+														</tr>
+														<tr>
+															<td>6 EMIs @13% PM</td>
+															<td>Rs 8,046 (Interest Rs.1,779)</td>
+															<td>₹ 48,278</td>
+														</tr>
+														<tr>
+															<td>9 EMIs @14% PM</td>
+															<td>Rs 5,473 (Interest Rs.2,754)</td>
+															<td>₹ 49,253</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div id="no-cost" class="emi-con">
+								<h1>No Cost EMI</h1>
+							</div>
+						</div>
+		    		</div>
+		    		<div class="popup-content warranty">
+		      		  	<img  class="close-icon" src="images/icon/close/white.svg" alt="close">
+	      		  		<div class="row">
+	      		  			<div class="col-11">
+				      		  	<h2>Extended Warranty</h2>
+				      		  	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore</p>
+				    		</div>
+				    		<div class="col-1">
+				    			<span class="text-red">T&C<small>s</small></span>
+				    		</div>
+			    		</div>
+			    		<div class="formRow checkboxradio ">
+							<div>
+					    		<input class="checkboxradio-item checkboxradio-invisible" name="warranty-group" id="radiobutton1"type="radio">
+					    		<label class="checkboxradio-label radio-label" for="radiobutton1">Include 1 year for ₹2,589</label>
+					    	</div>
+							<div>
+					    		<input class="checkboxradio-item checkboxradio-invisible" name="warranty-group" id="radiobutton2"type="radio">
+					    		<label class="checkboxradio-label radio-label" for="radiobutton2">Include 2 year for ₹3,987</label>
+					    	</div>
+							<div>
+					    		<input class="checkboxradio-item checkboxradio-invisible" name="warranty-group" id="radiobutton3"type="radio">
+					    		<label class="checkboxradio-label radio-label" for="radiobutton3">Include 3 year for ₹7,382</label>
+					    	</div>
+							<div>
+					    		<input class="checkboxradio-item checkboxradio-invisible" name="warranty-group" id="radiobutton4"type="radio">
+					    		<label class="checkboxradio-label radio-label" for="radiobutton4">Include 4 year for ₹10,335</label>
+					    	</div>
+					   	</div>
+					   	<div class="button button-primary">
+	              			<button>ADD WARRANTY</button>
+	              		</div>
+		    		</div>
+				</div>
+				<header class="home-header">
+                    <div class="container">
+                        <div class="header clearfix">
+                            <nav class="clearfix">
+                                <div class="col-5 left-nav hide-onsearch">
+                                    <ul class="clearfix ">
+                                        <li class="dropdown"><a href="#" title="Shop">Shop by Category</a></li>
+                                        <li><a href="#" title="Store Locatore">Store Locatore</a></li>
+                                        <li><a href="#" title="Contact Us">Contact Us</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-2 logo hide-onsearch">
+                                    <a class="no-effect" href="index.html">
+                                    <img src="images/logo.png" alt="logos" />
+                                    </a>
+                                </div>
+                                <div class="col-5 right-nav hide-onsearch">
+                                    <ul class="fR">
+                                        <li>
+                                            <a class="no-effect search-icon" href="#!">
+                                            <img class="img-normal" src="images/search-white.png" alt="search-icon" />
+                                            <img class="img-hover" src="images/search-black.png" alt="search-icon" />
+                                            </a>
+                                        </li>
+                                        <li class="mob-hide">
+                                            <a class="no-effect" href="#!">
+                                            <img class="img-normal" src="images/giftcard-white.png" alt="gift-icon" />
+                                            <img class="img-hover" src="images/giftcard-black.png" alt="gift-icon" />
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a class="no-effect" href="#!">
+                                            <img class="img-normal" src="images/bag-white.png" alt="shop-icon" />
+                                            <img class="img-hover" src="images/bag-black.png" alt="shop-icon" />
+                                            </a>
+                                        </li>
+                                        <li class="mob-hide">
+                                            <a class="no-effect" href="#!">
+                                            <img class="img-normal" src="images/account-white.png" alt="user-icon" />
+                                            <img class="img-hover" src="images/account-black.png" alt="user-icon" />
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <div class="col-12 search-wrapper">
+                                    <div class="search-bar">
+                                        <div class="search-block">
+                                            <input type="text" name="search" class="search-box" placeholder="What would you like to search for today?">
+                                            <button type="submit" name="submit" class="search-submit"><img src="images/search-white.png" alt="search" /></button>
+                                            <div class="search-result">
+                                                <div class="search-scroll">
+                                                    <div class="search-content">
+                                                        <a class="no-effect" href="#">Everyday</a>
+                                                    </div>
+                                                    <div class="search-content">
+                                                        <a class="no-effect" href="#">Economy</a>
+                                                    </div>
+                                                    <div class="search-content">
+                                                        <a class="no-effect" href="#">Easy style</a>
+                                                    </div>
+                                                    <div class="search-content">
+                                                        <a class="no-effect" href="#">Everyday</a>
+                                                    </div>
+                                                    <div class="search-content">
+                                                        <a class="no-effect" href="#">Easy style</a>
+                                                    </div>
+                                                    <div class="search-content">
+                                                        <a class="no-effect" href="#">Economy</a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="search-close">
+                                            <img src="images/close-white.png" alt="close" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </nav>
+                            <div class="menuHum">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="mobiMenu">
+                                <div class="menuHum">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <h5>Shop by Category</h5>
+                                <ul>
+                                    <li>
+                                        <a href="javascript:void(0);" class="catagory">
+                                        <img class="show" src="images/black-elc.png" alt="Large_Application"/>
+                                        <img class="hide" src="images/red-elc.png" alt="Large_Application"/>
+                                        <span>Large Appliances</span>
+                                        </a>
+                                        <ul class="sub-nav">
+                                            <li><a href="#">Login</a>
+                                            </li>
+                                            <li><a href="#">Rigester</a>
+                                            </li>
+                                            <li><a href="#">Store Locater</a>
+                                            </li>
+                                            <li><a href="#">Gift card</a>
+                                            </li>
+                                            <li><a href="#">About Us</a>
+                                            </li>
+                                            <li><a href="#">Contact Us</a>
+                                            </li>
+                                            <li><a href="#">Home Serve</a>
+                                            </li>
+                                            <li><a href="#">Viveks Foundation</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" class="catagory">
+                                        <img class="show" src="images/black-appl.png" alt="Large_Application"/>
+                                        <img class="hide" src="images/red-appl.png" alt="Large_Application"/>
+                                        <span>Consumer Electronics</span>
+                                        </a>
+                                        <ul class="sub-nav">
+                                            <li><a href="#">Login</a>
+                                            </li>
+                                            <li><a href="#">Rigester</a>
+                                            </li>
+                                            <li><a href="#">Store Locater</a>
+                                            </li>
+                                            <li><a href="#">Gift card</a>
+                                            </li>
+                                            <li><a href="#">About Us</a>
+                                            </li>
+                                            <li><a href="#">Contact Us</a>
+                                            </li>
+                                            <li><a href="#">Home Serve</a>
+                                            </li>
+                                            <li><a href="#">Viveks Foundation</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" class="catagory">
+                                        <img class="show" src="images/black-kich.png" alt="Large_Application" />
+                                        <img class="hide" src="images/red-kich.png" alt="Large_Application" />
+                                        <span>Kitchen Appliances</span>
+                                        </a>
+                                        <ul class="sub-nav">
+                                            <li><a href="#">Login</a>
+                                            </li>
+                                            <li><a href="#">Rigester</a>
+                                            </li>
+                                            <li><a href="#">Store Locater</a>
+                                            </li>
+                                            <li><a href="#">Gift card</a>
+                                            </li>
+                                            <li><a href="#">About Us</a>
+                                            </li>
+                                            <li><a href="#">Contact Us</a>
+                                            </li>
+                                            <li><a href="#">Home Serve</a>
+                                            </li>
+                                            <li><a href="#">Viveks Foundation</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" class="catagory">
+                                        <img class="show" src="images/black-phone.png" alt="Large_Application" />
+                                        <img class="hide" src="images/red-phone.png" alt="Large_Application"/>
+                                        <span>Phones</span>
+                                        </a>
+                                        <ul class="sub-nav">
+                                            <li><a href="#">Login</a>
+                                            </li>
+                                            <li><a href="#">Rigester</a>
+                                            </li>
+                                            <li><a href="#">Store Locater</a>
+                                            </li>
+                                            <li><a href="#">Gift card</a>
+                                            </li>
+                                            <li><a href="#">About Us</a>
+                                            </li>
+                                            <li><a href="#">Contact Us</a>
+                                            </li>
+                                            <li><a href="#">Home Serve</a>
+                                            </li>
+                                            <li><a href="#">Viveks Foundation</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" class="catagory">
+                                        <img class="show" src="images/black-elt.png" alt="Large_Application" />
+                                        <img class="hide" src="images/red-elt.png" alt="Large_Application"/>
+                                        <span>Electrical Home Appliances</span>
+                                        </a>
+                                        <ul class="sub-nav">
+                                            <li><a href="#">Login</a>
+                                            </li>
+                                            <li><a href="#">Rigester</a>
+                                            </li>
+                                            <li><a href="#">Store Locater</a>
+                                            </li>
+                                            <li><a href="#">Gift card</a>
+                                            </li>
+                                            <li><a href="#">About Us</a>
+                                            </li>
+                                            <li><a href="#">Contact Us</a>
+                                            </li>
+                                            <li><a href="#">Home Serve</a>
+                                            </li>
+                                            <li><a href="#">Viveks Foundation</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" class="catagory">
+                                        <img class="show" src="images/black-pers.png" alt="Large_Application" />
+                                        <img class="hide" src="images/red-pers.png" alt="Large_Application"/>
+                                        <span>Personal Care</span>
+                                        </a>
+                                        <ul class="sub-nav">
+                                            <li><a href="#">Login</a>
+                                            </li>
+                                            <li><a href="#">Rigester</a>
+                                            </li>
+                                            <li><a href="#">Store Locater</a>
+                                            </li>
+                                            <li><a href="#">Gift card</a>
+                                            </li>
+                                            <li><a href="#">About Us</a>
+                                            </li>
+                                            <li><a href="#">Contact Us</a>
+                                            </li>
+                                            <li><a href="#">Home Serve</a>
+                                            </li>
+                                            <li><a href="#">Viveks Foundation</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" class="catagory">
+                                        <img class="show" src="images/black-print.png" alt="Large_Application" />
+                                        <img class="hide" src="images/red-print.png" alt="Large_Application"/>
+                                        <span>Laptops & Printers</span>
+                                        </a>
+                                        <ul class="sub-nav">
+                                            <li><a href="#">Login</a>
+                                            </li>
+                                            <li><a href="#">Rigester</a>
+                                            </li>
+                                            <li><a href="#">Store Locater</a>
+                                            </li>
+                                            <li><a href="#">Gift card</a>
+                                            </li>
+                                            <li><a href="#">About Us</a>
+                                            </li>
+                                            <li><a href="#">Contact Us</a>
+                                            </li>
+                                            <li><a href="#">Home Serve</a>
+                                            </li>
+                                            <li><a href="#">Viveks Foundation</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" class="catagory">
+                                        <img class="show" src="images/black-clen.png" alt="Large_Application" />
+                                        <img class="hide" src="images/red-clen.png" alt="Large_Application" />
+                                        <span>Clearance</span>
+                                        </a>
+                                        <ul class="sub-nav">
+                                            <li><a href="#">Login</a>
+                                            </li>
+                                            <li><a href="#">Rigester</a>
+                                            </li>
+                                            <li><a href="#">Store Locater</a>
+                                            </li>
+                                            <li><a href="#">Gift card</a>
+                                            </li>
+                                            <li><a href="#">About Us</a>
+                                            </li>
+                                            <li><a href="#">Contact Us</a>
+                                            </li>
+                                            <li><a href="#">Home Serve</a>
+                                            </li>
+                                            <li><a href="#">Viveks Foundation</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="#">Login</a>
+                                    </li>
+                                    <li><a href="#">Rigester</a>
+                                    </li>
+                                    <li><a href="#">Store Locater</a>
+                                    </li>
+                                    <li><a href="#">Gift card</a>
+                                    </li>
+                                    <li><a href="#">About Us</a>
+                                    </li>
+                                    <li><a href="#">Contact Us</a>
+                                    </li>
+                                    <li><a href="#">Home Serve</a>
+                                    </li>
+                                    <li><a href="#">Viveks Foundation</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+				<!-- product-detail body section start-->
+				<div class="product-wrap">
+		            <div class="container">
+		                <div class="breadcrumbs clearfix nomobile">
+		                    <ul>
+		                        <li><a href="#" title="Home">Home</a></li>
+		                        <li><a href="#" title="Home">Shop</a></li>
+		                        <li><a href="#" title="Home">Camera</a></li>
+		                        <li><a href="#" title="Home">CANON EOS 200D DSLR CAMERA…</a></li>
+		                    </ul>
+		                </div>
+		                <!-- Gallery section start-->
+		                <div class="product-section">
+			                <div class="row">
+			                	<div class="col-6">
+			                		<div class="descview">
+			                            <h2>Canon EOS 200D DSLR Camera (18-55 + 55-250mm, Black)</h2>
+			                        </div>
+			                	</div>
+			                    <div class="col-10">
+			                        <div class="row">
+			                            <div class="col-7">
+			                                <div class="row">
+			                                    <div class="col-12">
+			                                        <div class="product no-desc">
+			                                            <div class="no-desc back-catagory"><a href="#"><i class="fa fa-angle-left" aria-hidden="true"></i>Canon EOS 200D DSLR Camera</a></div>
+			                                            <h1>Canon EOS 200D DSLR Camera (18-55 + 55-250mm, Black)</h1>
+			                                        </div>
+			                                        <div class="provider provider-css">
+			                                        	<a href="#">
+			                                            	<img src="images/product-details/img1.jpg" alt="camera">
+			                                        	</a>
+			                                            <a href="#">
+			                                                <img src="images/product-details/img2.jpg" alt="camera">
+			                                            </a>
+			                                            <a href="#">
+			                                                <img src="images/product-details/img3.jpg" alt="camera">
+			                                            </a>
+			                                            <a href="#">
+			                                                <img src="images/product-details/img4.jpg" alt="camera">
+			                                            </a>
+		                                            	<iframe class="youtube-video" width="100%" src="https://www.youtube.com/embed/SO8r38FlmRE?rel=0" frameborder="0"  allowfullscreen>
+		                                            	</iframe>
+			                                        </div>
+			                                    </div>
+			                                </div>
+			                                <div class="row">
+			                                    <div class="col-12">
+			                                        <div class="provider-nav providernav-css">
+			                                            <div class="provider-image">
+			                                                <img src="images/product-details/img1.jpg" alt="camera">
+			                                            </div>
+			                                            <div class="provider-image">
+			                                                <img src="images/product-details/img2.jpg" alt="camera">
+			                                            </div>
+			                                            <div class="provider-image">
+			                                                <img src="images/product-details/img3.jpg" alt="camera">
+			                                            </div>
+			                                            <div class="provider-image">
+			                                            	<img src="images/product-details/img4.jpg" alt="camera">
+			                                            </div>
+			                                            <div class="provider-image">
+			                                            	<img class="video-icon" src="images/product-details/video.png" alt="camera">
+			                                                <img src="images/product-details/img5.jpg" alt="camera">
+			                                            </div>
+			                                        </div>
+			                                    </div>
+			                            	</div>
+			                            </div>
+			                            <div class="col-5">
+			                                <div class="product">
+			                                    <div class="product-cost">
+				                                    <span class="actual-price">₹11,963</span>
+				                                    <span class="rupee unitprice">₹16,990</span>
+				                                    <span class="text-red off">15% off</span>
+			                                    </div>
+			                                    <div class="feature-block border-line">
+			                                    	<div> EMI starts at ₹2,589. </div>
+			                                    	<div>
+			                                    		<span class="text-red view-plan">view plan</span> 
+			                                    	</div>
+			                                    </div>
+		                                    	<h3>Extended Warranty</h3>
+		                                    	<div class="feature-block border-line">
+												      	<input class="checkboxradio-item checkboxradio-invisible " id="checkbox1" type="checkbox">
+												      	<label class="checkboxradio-label checkbox-label" for="checkbox1">Include 1 year for ₹2,589</label>
+										         	<div>
+		                                    			<span class="text-red view-warranty">view options</span> 
+		                                    		</div>
+										        </div>
+			                                    <div class="feature-block border-line">
+				                                    <h4>Quantity</h4>
+			                                        <div class="preloadtd cart-table formCol">
+			                                            <button class="textbox-right">-</button>
+			                                            <input type="text" class="textbox-small" maxlength="3" value="1" readonly>
+			                                            <button class="textbox-left">+</button>
+			                                        </div>
+		                                            <div class=" adding button button-primary " >
+		                                            	<button>Add to bag</button>
+		                                        	</div>
+				                                </div>
+				                                <div class="row">
+					                                <div class="col-10">
+						                                <div class="stock-check">
+						                                	<h4>Check Pincode</h4>
+						                                	<div class="form-row remove-space">
+																<label class="floating-item" data-error="Please enter valid mobile number">
+																	<input type="text"  class="floating-item-input input-item" name="mobile number" placeholder="Please enter your pincode to check stock" value="" required />
+																</label>
+					                                			<span class="text-red ">check</span> 
+															</div>
+															<div class="compare-block">
+																<div class="checkboxradio-row">
+																	<a href="#!">
+																		<input class="checkboxradio-item checkboxradio-invisible " id="checkbox2" type="checkbox">
+													      				<label class="checkboxradio-label checkbox-label" for="checkbox2"><span class="text-blue">Add to Compare</span></label>
+																	</a>
+												      			</div>
+					                                		</div>
+						                                </div>
+						                            </div>
+						                        </div>
+			                                </div>
+			                            </div>
+			                        </div>
+			                    </div>
+			                </div>
+			            </div>
+		                <!-- Gallery section end -->
+		                <!-- Tab section start -->
+		                <div class="product-section">
+		                	<div class="row">
+		                		<div class="col-8">
+									<div class="pro-tab">                 
+						            	<ul>
+						            		<li class="active" value="#spec"><h4>Specifications</h4></li>
+						            		<li value="#disc"> <h4>Discription</h4></li>
+						            		<li value="#warranty"><h4>Warranty Details</h4></li>
+						            	</ul>
+						           	</div>
+						           	<div class="pro-con">
+						           		<div class="detail-section active" id="spec">
+						           			<table>
+						           				<tbody>
+						           					<tr>
+						           						<th><h5> General Features</h5></th>
+						           					</tr>
+						           					<tr>
+						           						<td>Brand</td>
+						           						<td>NIKON</td>
+						           					</tr>
+						           					<tr>
+						           						<td>Model</td>
+						           						<td>D5300 (18-55MM)</td>
+						           					</tr>
+						           					<tr>
+						           						<td>Sku</td>
+						           						<td>D5300113-55MMBLK</td>
+						           					</tr>
+						           					<tr>
+						           						<td>Type</td>
+						           						<td>DSLR</td>
+						           					</tr> 
+						           					<tr>
+						           						<td>Other Features</td>
+						           						<td>-</td>
+						           					</tr>
+						           					<tr>
+						           						<th><h5> Zoom</h5></th>
+						           					</tr>
+						           					<tr>
+						           						<td>Optical</td>
+						           						<td>-</td>
+						           					</tr>
+						           					<tr>
+						           						<td>Digital</td>
+						           						<td>-</td>
+						           					</tr>
+						           					<tr>
+						           						<th><h5> Effective Pixels</h5></th>
+						           					</tr>
+						           					<tr>
+						           						<td>Pixels</td>
+						           						<td>24.1 MP</td>
+						           					</tr>
+						           					<tr>
+						           						<th><h5>LCD</h5></th>
+						           					</tr>
+						           					<tr>
+						           						<td>Display</td>
+						           						<td>Vari-angle TFT Monitor with 170°, Viewing Angle</td>
+						           					</tr>
+						           					<tr>
+						           						<td>Screen size</td>
+						           						<td>3.2 (18.12 cm)</td>
+						           					</tr>
+						           					<tr>
+						           						<td>Image display resolution</td>
+						           						<td>1,036,800 dots</td>
+						           					</tr>
+						           					<tr>
+						           						<td>Video display resolution</td>
+						           						<td>1920 X 1080, 60p</td>
+						           					</tr> 
+						           					<tr>
+						           						<td>Other Features</td>
+						           						<td>Viewfinder: Yes, Eye-level Pentamirror, Single-lens Reflex Viewfinder </td>
+						           					</tr>
+						           					<tr>
+						           						<th><h5>Sensor</h5></th>
+						           					</tr>
+						           					<tr>
+						           						<td>Type</td>
+						           						<td>CMOS</td>
+						           					</tr>
+						           					<tr>
+						           						<td>Size</td>
+						           						<td>23.5 mm X 15.6 mm </td>
+						           					</tr>
+						           					<tr>
+						           						<th><h5>Other Features</h5></th>
+						           					</tr>
+						           					<tr>
+						           						<td>Face detection</td>
+						           						<td>-</td>
+						           					</tr>
+						           					<tr>
+						           						<td>ISO rating</td>
+						           						<td>SO 100 - 12800 in Steps of 1/3 EV, Can also be Set to 0.3, 0.7, or 1 EV (ISO 25600 Equivalent) above ISO 12800</td>
+						           					</tr>
+						           					<tr>
+						           						<td>Self Timer</td>
+						           						<td>Yes, 2, 5, 10 and 20 sec</td>
+						           					</tr>
+						           					<tr>
+						           						<td>Shooting modes</td>
+						           						<td>Auto Modes (Auto : Auto (Flash Off)), Programmed Auto with Flexible Program, Shutter-priority Auto, Aperture-priority Auto, Manual, Scene Modes, Special Effects </td>
+						           					</tr> 
+						           					<tr>
+						           						<td>Scens modes</td>
+						           						<td>-</td>
+						           					</tr>
+						           					<tr>
+						           						<td>Metering</td>
+						           						<td>TTL Exposure Metering, Matrix Metering: 3D Color Matrix Metering II (Type G, E, and D Lenses), Color Matrix Metering II (Other CPU Lenses), Center Weighted Metering, Spot Metering</td>
+						           					</tr>
+						           					<tr>
+						           						<td>White balancing</td>
+						           						<td>Auto, Incandescent, Fluorescent (7 Type), Direct Sunlight, Flash, Cloudy, Shade, Preset Manual, AII Except Preset Manual with Fine-tuning </td>
+						           					</tr> 
+						           					<tr>
+						           						<td>Additional Features</td>
+						           						<td>Maximum Shutter Speed : 1/4000 sec <br> Minimum Shutter Speed : 30 sec <br>Microphone : Built-in <br> USB Cable : Hi-speed USB <br> PictBridge <br> Audio Video Interface : Video Output (NTSC, PAL) <br> Sync Terminal: Yes <br> Type C Mini-pin HDMI <br> Supported Languag </td>
+						           					</tr>
+						           				</tbody>
+						           			</table>
+						           		</div>
+						           		<div class="detail-section" id="disc">
+						           			Discription
+						           		</div>
+						           		<div class="detail-section" id="warranty">
+						           			Warranty Details
+						           		</div>
+						           	</div>
+						        </div>
+					        </div>
+		                </div>
+		                <!-- Tab section end -->
+		       		</div>
+		       	</div>
+				<!-- product-detail body section ends-->
+				<footer>
+					<div class="container">
+						<div class="row aligncontent">
+							<div class="col-3 copyright">
+								<div class="footeritems">
+									<a class="mob-show no-effect" href="#!">
+										<img src="images/logo.png" />	
+									</a>
+									<a class="mob-hide no-effect" href="#!">
+										<img src="images/foot-logo.png" />
+									</a>
+									<p> &copy; 2019 Viveks. All right reserved.</p>
+								</div>
+								<p>New No 68, Old No 150, 2nd Floor,<br/> Luz Church Road, Mylapore, Chennai,<br/> Tamil Nadu 600004</p>
+								<div class="socilogo">
+									<a href="#!" class="no-effect"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+									<a href="#!" class="no-effect"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+								</div>
+							</div>
+							<div class="col-5 footerhide">
+								<div class="listfooter">
+									<ul class="clearfix">
+										<li>
+											<a href="#">ABOUT US</a>
+										</li>
+										<li>
+											<a href="#">MY ACCOUNT</a>
+										</li>
+										<li>
+											<a href="#">TERMS OF SALE</a>
+										</li>
+		                                <li>
+		                                	<a href="#">MY ORDERS</a>
+		                                </li>
+		                                <li>
+		                                	<a href="#">RETURN POLICY</a>
+		                                </li>
+		                                <li>
+		                                	<a href="#">CONTACT US</a>
+		                                </li>
+										<li>
+											<a href="#">PRIVACY POLICY</a>
+										</li>
+		                                <li>
+		                                	<a href="#">BLOG</a>
+		                                </li>
+									</ul>
+								</div>
+							</div>
+							<div class="col-4 footerhide emailtext">
+								<p>Sign up to get exclusive offers.</p>
+								<div class="emailpartinput">
+									<input type="text"  name="fff" placeholder="Enter your email address">
+									<div class="button-primary">
+										<button>SIGNUP</button>
+									</div>
+								</div>
+								<div class="payment-icon-con">
+									<ul>
+										<li>
+											<div class="payment-icon">
+												<img src="images/pay1.png">
+											</div>
+										</li>
+										<li>
+											<div class="payment-icon">
+												<img src="images/pay2.png">
+											</div>
+										</li>
+										<li>
+											<div class="payment-icon">
+												<img src="images/pay3.png">
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+				</footer> 
+			</div>
+		</div>
+		<script>
+		  	var jsArr = ['js/app.js'];
+			for(var j = 0; j < jsArr.length; j++) {
+		        var script = document.createElement('script')
+		        script.setAttribute('type', 'text/javascript')
+		        script.setAttribute('src', jsArr[j])
+		        document.getElementsByTagName('head')[0].appendChild(script)
+		    }
+		</script>
+	</body>
+</html>

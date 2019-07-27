@@ -32907,6 +32907,8 @@ var app = (function() {
             _discriptionSlider();
             myAccountAccordTab();
             _address();
+            _address();
+            SimplePopup();            
             _cardSection();
             _mobileMenuHandler();
             _menuSlide();
@@ -32987,6 +32989,30 @@ var app = (function() {
                 $("#e").fadeIn(800).siblings().hide();
             });
         },
+        productAccordTab=function(){
+            $('.pro-tab li').on('click', function(e) {
+                e.preventDefault();
+                var currentAttrValue = $(this).attr('value');
+                $(this).addClass('active').siblings().removeClass('active');
+                $(currentAttrValue).fadeIn(800).siblings().hide();
+            });
+        },
+        SimplePopup=function(){
+            $('.adding').on('click', function(){
+                console.log(0);
+            });
+            $('.view-plan').on('click', function(){
+                $(".popup-section").fadeIn(800);
+                $(".popup-content.emi").fadeIn(500).siblings().hide();
+            });
+            $('.view-warranty').on('click', function(){
+                $(".popup-section").fadeIn(800);
+                $(".popup-content.warranty").fadeIn(500).siblings().hide();
+            });
+            $('.close-icon').on('click', function(){
+                $(".popup-section").fadeOut(500);
+            });
+        },
         _address=function(){
             $('.address-add').on('click', function(){
                 $(".address-section.add").fadeIn(800).siblings().hide();
@@ -32996,24 +33022,22 @@ var app = (function() {
             });
             $('.address-edit').on('click', function(){
                 $(".address-section.edit").fadeIn(800).siblings().hide();
-            });
+            }); 
         },
         myAccountAccordTab=function(){
             if($(window).width() <= 1024) {
-                $('.myaccount-subform h2').on('click', function(){
+                $('.myaccount-subform .my-slide').on('click', function(){
                   if(!$(this).hasClass('active')){
-                       $('.myaccount-subform h2').removeClass('active');
+                       $('.myaccount-subform .my-slide').removeClass('active');
                        $(".myaccount-subform .subformtab").stop(true, true).slideUp();
                        $(this).addClass('active');
                        $(this).next(".subformtab").slideDown();
                   }else{
-                      $('.myaccount-subform h2').removeClass('active');
+                      $('.myaccount-subform .my-slide').removeClass('active');
                         $(".myaccount-subform .subformtab").stop(true, true).slideUp();
                   }
                 });
-                $('.myaccount-subform h2').first().addClass('active');
-                $(".myaccount-subform .subformtab").first().slideDown();
-                $('.myaccount-subform h2').bind('click',function(){
+                $('.myaccount-subform .my-slide').bind('click',function(){
                     var self = $('.myaccount-form');
                     setTimeout(function() {
                         var theOffset = $(self).offset();
@@ -33021,7 +33045,7 @@ var app = (function() {
                     }, 100); // ensure the collapse animation is done
                 });
             }
-            $('.myaccount-sidetab li').on('click', function(e) {
+            $('.sidetab li').on('click', function(e) {
                 e.preventDefault();
                 var currentAttrValue = $(this).attr('value');
                 $(this).addClass('active').siblings().removeClass('active');
@@ -33700,7 +33724,6 @@ var app = (function() {
                 focusOnSelect: true,
                 dots: false,
                 arrows: false, 
-                vertical: true,
                 asNavFor: '.provider',
                 verticalSwiping: true,
                 responsive: [
@@ -33715,6 +33738,13 @@ var app = (function() {
                 ]
             }); 
             
+            $(".provider-nav").on("beforeChange", function (){
+                //change color here
+                if (! $('.youtube-video').parents('.slick-current').length){
+                    $('.youtube-video').attr('src', $('.youtube-video').attr('src'));
+                }
+            });
+           
             $('.like-slider').slick({
                 slidesToShow: 4.5,
                 slidesToScroll:4,  
