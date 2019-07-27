@@ -1,29 +1,31 @@
-.input-adjust{
-	background-color: #fff;
-	padding: 40px;
-	margin-bottom: 60px;
-}
-.form-row {
-    display: block;
-    margin: 0 0 50px;
-    width: 460px;
-}
-.bottomtext{
-	padding-top: 25px;
-	padding-bottom: 25px
-	a{
-		color: red;
+.signup-section{
+	.input-adjust{
+		background-color: #fff;
+		padding: 40px;
+		margin-bottom: 60px;
 	}
-}
-.input-item {
-    width: 400px;
-}
-.headersignup{
-		padding: 0px 55px;
-}
-.checkbox-label{
-	a{
-		color: $header-bg;
+	.form-row {
+	    display: block;
+	    margin: 0 0 50px;
+	    width: 460px;
 	}
-}
+	.bottomtext{
+		padding-top: 25px;
+		padding-bottom: 25px
+		a{
+			color: red;
+		}
+	}
+	.input-item {
+	    width: 400px;
+	}
+	.headersignup{
+			padding: 0px 55px;
+	}
+	.checkbox-label{
+		a{
+			color: $header-bg;
+		}
+	}
 
+}

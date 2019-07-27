@@ -1,0 +1,631 @@
+.main-blk{
+    padding-top: 30px;
+}
+.btn{
+    &:focus{
+        outline:none;
+        box-shadow: none;
+    }
+}
+.total-blk{
+    span{
+        font-size: 18px;
+    }
+}
+.rupee{
+    &.unitprice{
+        position: relative;
+        margin-right: 10px;
+        color: $gray;
+        font-family: $nunito-semibold;
+        &:before{
+            content:'';
+            position:absolute;
+            height: 2px; 
+            width: 100%;
+            background-color: $gray;
+            top: 50%;
+            left: 0;
+            @include transform(translateY(-50%));
+        }
+    }
+}
+.discountTr{
+    > .shipping{
+        th, td{
+            padding-top: 15px;
+        }
+    }
+}
+.address-field{
+    td{
+        padding-bottom: 40px;
+    }
+}
+.cart{ 
+    &-table{
+        &.order-table{
+            .sub-total{
+                font-weight: inherit;
+            }
+            th{
+                text-align: center;
+            }
+            td{
+                text-align: center;
+                &:first-child{
+                    width:inherit;
+                }
+            }
+            .product-subtotal{
+                font-family: $nunito-semibold;
+                &:last-child{
+                    font-family:$nunito-semibold;
+                }
+            }
+        }
+        .product-subtotal{
+            .rupee{
+                font-family: $nunito-semibold;
+            }
+        }
+        .remove-btn{
+            font-size: 14px;
+            line-height:24px; 
+            letter-spacing: 2px;
+            margin-left: 10px;
+            font-family: $nunito-bold;
+        }
+        .sub-total{
+            line-height: 22px;
+        }
+        th {
+            border:{
+                bottom:1px solid $black; 
+                top:1px solid $black;
+            }
+            font-size:16px;
+            color: $black;
+            padding:20px 20px 0px 20px;
+            font-weight:400;
+            text:{
+                align:center;
+                transform:uppercase;
+            }
+            &:first-child{
+                padding-left: 0;
+                text-align:left;
+            }
+            &:last-child{
+                padding-right: 0;
+                text-align:right;
+            }
+        }
+        tr{
+            border-bottom:1px solid $black;
+            &:last-child{
+                border-bottom:0;
+            }
+        }
+        td {
+            color: black;
+            padding:15px 20px;
+            text-align:center;
+            &:first-child{
+                padding-left:0;
+                text-align:left;
+                /*width: 50%;*/
+            }
+            &:last-child{
+                padding-right:0;
+                text-align:right;
+            }
+            a{
+                i{font-size: 14px;}
+            }
+        }
+        a{
+            text-decoration: none; 
+            color: $black;
+        }
+        img{
+            float: left;
+            width: 77px;
+            height: 70px;
+            cursor: pointer;
+            object-fit: contain;
+            padding-top: 30px;
+            margin-bottom: 5px;
+        }
+        .textbox-small, .textbox-right, .textbox-left{
+            color: $black;
+            font-family: $nunito-semibold;
+            border:none;
+            height: 44px;
+            width: 34px;
+            vertical-align: top;
+            font-size: 16px;
+            line-height: 22px;       
+            padding: inherit;
+            text-align: center;
+            background-color: transparent;
+        }
+        .textbox-small{
+            position: relative;
+        }
+        .discount-wrapper{
+            width:380px;
+            tr{
+                &:first-child{
+                    border-bottom: 0;
+                }
+            }
+            &.border-show{
+                tr{
+                    &:first-child{
+                        border-bottom: 1px solid $black;
+                    }
+                }
+            }
+        }
+        .textBox{ 
+            border:none; 
+            height:50px; 
+            padding:18px; 
+            width:100%;
+        }
+        #voucherInner {
+            height:1%;
+        } 
+        .voucherCodeFiled { 
+            padding-bottom:0;
+            text-align:left; 
+            .textBox{
+                color: black;
+                padding:{
+                    left: 20px;
+                    right: 150px;
+                }
+                border:0;
+                font:{
+                    size: 14px;
+                }
+                line-height: 20px;
+            } 
+        }
+        .addvoucher{
+            cursor: pointer;
+            border:{
+                top: 2px solid black;
+                bottom: 2px solid black;
+            } 
+            font-family:$nunito-bold;
+            font-size:16px;
+            line-height:22px;
+            padding: 15px 0;
+            line-height: 20px;    
+            text-transform: none;
+            i{
+                font-size: 12px;
+                margin-right: 4px;
+            }
+        }
+        .total-blk{
+            td{
+                padding-top: 30px;
+            }
+        }
+    }  
+    &-list-blk{
+        margin-bottom:2px;
+        @include display-flex;
+        @include align-items(center);
+        > a{
+            &:before{
+                display:none;
+            }
+            &:hover{
+                opacity: 1;
+            }
+        }
+    }
+    &-title{
+        display: inline-block;
+        padding-left: 20px;
+        padding-top: 30px;
+        h3{
+            padding-top: 0;
+            font-family: $nunito-semibold;
+            font-size: 16px;
+            line-height: 22px;
+        }
+        h2{
+            padding-bottom: 5px;
+        }
+    }
+    input{
+        border:inherit;
+    }
+}
+
+#discountAmount{
+    td{
+        vertical-align: top;
+    }
+    strong{
+        font-size: 16px;
+    }    
+}
+.close-voucher{
+    position: absolute;
+    left: 0px;
+    top: 50%;
+    @include transform(translateY(-50%));
+    z-index: 999;
+    cursor: pointer;
+    line-height: 0;
+    font-size: 14px;
+    i{
+        position: static;
+    }
+}
+.applybutd { 
+    border: 2px solid black;
+    border-left: 0; 
+    border-right: 0;
+    display: none;
+    padding-right:0px; 
+    position:relative;
+    width:100%;
+    button{
+        display: none; 
+        border-radius: 0;
+        width: 130px;
+        position: absolute;
+        right: 0;
+        height: 54px;
+        top: -2px;
+        min-width: inherit;
+        z-index: 9999;
+    }
+    .searchBox {
+        color:black; 
+        font-size:14px;
+        font-weight:200; 
+        padding:10px 90px 10px 15px; 
+    }
+    input[type="button"] {  
+        min-width:inherit; 
+        position:absolute; 
+        right:0;
+        top:-2px; 
+        z-index:1;
+    }
+}
+.tick-box{
+    width: 130px;
+    right: 0;
+    height: 54px;
+    top: -2px;
+    background-color: transparent;
+    border-radius: 0;
+    position: absolute;
+    display: inline-block;
+    box-sizing: border-box;
+    transition-property: all;    
+    transition-duration: .2s;
+    transition-timing-function: ease;
+    cursor: pointer;
+}
+#discountAmount {
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    display: none;
+    }
+.tryagain {
+    background: black;
+    box-shadow: 0px -2px 0px 0px black, 0px 2px 0px 0px black;
+    border-top: 5px solid white;
+    border-bottom: 5px solid white;
+    color: white;
+    display: none;
+    padding: 10px 20px;
+    text-align: center;
+}
+.checkout {
+    position: relative;
+    .button{
+        min-width: 380px;
+        margin: 0 auto;
+    }
+}
+.subwrap{
+    padding-bottom: 50px;
+}
+.formCol{
+    position: relative;
+}
+.shopcontinue {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    text-transform: uppercase;
+    color: $black;
+    font-size: 16px;
+    line-height: 22px;
+}
+.remove-voucher{
+    display: block;
+    padding-top: 6px;
+    text-decoration: underline;
+}
+.preloadtd{
+    @include display-flex;
+    @include justify-content(center);
+    border:1px solid $black; 
+    button[disabled]{
+        border-color: #e8e8e8;
+        color: #c1c1c1;
+    }
+}
+.proTitle{
+    font-size: 16px;
+}
+.shipping{
+    th{
+        border-top: 0;
+    }
+    th,td{
+        padding-top: 5px;
+    }
+    label{
+        margin-bottom: 0;
+    }
+}
+/*loader*/
+.preloader{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include transform(translate(-50%, -50%));
+    img{
+        border:none;
+        width: 30px;
+        height: 30px;
+        outline: none;
+    }
+}
+@media screen and (max-width: 1000px) {
+    .cart{
+        h1{
+            border-bottom: 1px solid #ccc;
+            padding-bottom: 30px;
+        } 
+        &-table{
+            td{
+                &:first-child{
+                    width:30%;
+                }
+            }
+        }
+        &-title{
+            padding-left: 0;
+        }
+    }
+}
+@media screen and (max-width: 640px) {
+    .applybutd{
+        height: 54px;
+    }
+    .subwrap{
+        padding-bottom: 20px;
+    }
+
+    .preloadtd{
+        @include justify-content(inherit);
+        margin-top: 25px;
+    }
+    .shopcontinue{
+        position: relative;
+        padding-top :20px;
+        text-align: center;
+        @include transform(none);
+    }
+    .formCol, .sub-total{
+        width: 100%;
+        position: relative;
+    }
+    table{
+        &.order-table{
+            td{
+                &:before{
+                    content: attr(data-title);
+                    padding-top:0;
+                    top: inherit;
+                }
+            }
+        }
+    }
+    .cart{
+        &-title{
+            padding-top: 0;
+            overflow:hidden;
+            padding-left: 0;
+            width: 100%;
+            h2{
+                padding-top: 0
+            }
+        }
+        &-list{
+            padding-bottom: 50px;
+            margin-top: 8px;
+            background-color: $white;
+            &-blk{
+                margin: 0;
+                display: block;
+                a{
+                    width: 50%;
+                    img{
+                        width:100%;
+                       
+                    }
+                }
+            }
+        } 
+        &-table{
+            .remove-btn{
+                margin-left: 0px;
+            }
+            .addvoucher{
+                a{
+                    &:before{
+                        display:none;
+                    }
+                }
+            } 
+            .sub-total{
+                @include display-flex;
+                padding-top: 35px;
+                font-size: 16px;
+                .rupee{
+                    &.unitprice{
+                        ~ .rupee{
+                            display: none;
+                        }
+                    }
+                }
+                &.no-desc{
+                    .rupee{
+                        font-family: $nunito-semibold;
+                    }
+                }
+            }
+            .cart{
+                &-list{
+                    border-bottom: 1px solid $black;
+                }
+            }
+            &.order-table{
+                .product-subtotal{
+                    @include display-flex;
+                    @include justify-content(space-between);
+                    @include align-items(center);
+                    @include flex-direction(row-reverse);
+                    padding-right: 0;
+                }
+                td{
+                    &:before{
+                        padding-top:0;
+                        top: inherit;
+                    }
+                    &:first-child{
+                        @include display-flex;
+                        @include justify-content(space-between);
+                    }
+                }
+                tr{
+                    border-bottom: 1px solid $black;
+                    &:last-child{
+                        display:block;
+                    }
+                }
+            }
+            .remove-btn{
+                position: absolute;
+                bottom: 25px;
+            }
+            .voucherCodeFiled{
+                .textBox{
+                    position: relative;
+                }
+            } 
+            .shipping{
+                td{
+                    @include display-flex;
+                    @include align-items(center);
+                    @include justify-content(space-between);
+                    text-align: left;
+                    padding-left: 0;
+                    border-bottom: 2px solid $black;
+                    &:before{
+                        padding-top:0;
+                        position: relative;
+                    }
+                }
+            }
+            tr{
+                position: relative;
+                display: block;
+                border-bottom:none;
+                &:last-child{
+                    @include display-flex;
+                    @include align-items(center);
+                }
+            }
+            th{
+                display: none;
+            }
+            .discount-wrapper{
+                width: 100%;
+            }
+            img{
+                border:none;
+                outline: none;
+            }
+            td{
+                padding-left: 0;
+                display: block;
+                &:before{
+                    position:absolute;
+                    /*content: "hai";*/
+                    left: 0;
+                    top: 0;
+                    font-family: $nunito-semibold;
+                }
+                &:last-child{
+                    font-size: 16px;
+                }
+                &:first-child{
+                    width:100%;
+                    display: block;
+                    padding-right: 0;
+                    padding-top: 0;
+                    padding-bottom: 0;
+                }
+            }
+            .total-blk{
+                td{
+                    padding-top: 20px;
+                    padding-bottom: 20px;
+                }
+            }
+        }
+    }
+    .proTitle{
+        font-size: 12px;
+        line-height: 22px;
+    }
+    .checkout{
+        text-align: center;
+        .button{
+            min-width: 100%;
+            display: block;
+            float: none;
+            margin-bottom: 20px;
+        }
+    }
+    .preloader{
+        @include transform(none);
+        left: 0;
+        right: inherit;
+        img{
+            width: 30px;
+        }
+    }
+    .shipping{
+        th, td{
+            padding-top: 15px !important;
+        }
+    }
+} 

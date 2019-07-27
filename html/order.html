@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html class="homebg" lang="en">
+<head>	
+	<meta charset="utf-8">
+	<meta name="viewport" content="user-scalable=no,initial-scale=1,maximum-scale=1.0" />
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js" />
+	<title>My Order</title>
+	<!-- modernizr included -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+
+	<style>
+		body{
+			background-color: #fff;
+		}  
+		.render-blk{ opacity:0; }
+	</style>
+	<script>
+		var cssArr = ['css/app.css'];
+		for(var i = 0; i < cssArr.length; i++) {
+			var link = document.createElement('link');
+			link.setAttribute('rel', 'stylesheet');
+			link.setAttribute('type', 'text/css');
+			link.setAttribute('href', cssArr[i]);
+			document.getElementsByTagName('head')[0].appendChild(link);
+		}
+	</script>
+	<noscript>
+		<style media="screen">
+			.render-blk{ opacity: 1; }	
+		</style>
+	</noscript>
+</head> 
+
+<body>
+<div class="render-blk">
+	<div id="subPage" class="lightwhite-bg">
+		<!-- header start -->
+		<header class="home-header">
+				<div class="container">
+					<div class="header clearfix">
+						<nav class="clearfix">
+							<div class="col-5 left-nav">
+								<ul class="clearfix ">
+									<li class="dropdown"><a href="#" title="Shop">Shop</a></li>
+									<li><a href="#" title="Store Locatore">Store Locatore</a></li>
+									<li><a href="#" title="Contact Us">Contact Us</a></li>
+								</ul>
+							</div>
+							<div class="col-2 logo">
+								<a class="no-effect" href="index.html">
+									<img src="images/logo.png" alt="logos" />
+								</a>
+							</div>
+							<div class="col-5 right-nav">
+								<ul class="fR">
+									<li>
+										<a class="no-effect" href="#!">
+											<img src="images/search-icon.png" alt="search-icon" />
+										</a>
+									</li>
+									<li>
+										<a class="no-effect" href="#!">
+											<img src="images/gift-icon.png" alt="gift-icon" />
+										</a>
+									</li>
+									<li>
+										<a class="no-effect" href="#!">
+											<img src="images/shopcart-icon.png" alt="search-icon" />
+										</a>
+									</li>
+									<li>
+										<a class="no-effect" href="#!">
+											<img src="images/user-icon.png" alt="search-icon" />
+										</a>
+									</li>
+								</ul>
+							</div>
+						</nav>
+						<div class="menuHum">
+							<span></span>
+							<span></span>
+							<span></span>
+						</div> 
+						<div class="mobiMenu">
+							<div class="menuHum">
+								<span></span>
+								<span></span>
+								<span></span>
+							</div> 
+							<ul>
+								<li><a href="#" title="Shop">Shop</a></li>
+								<li><a href="#" title="Discover">Discover</a></li>
+								<li><a href="#" title="Help">Help</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+		</header>
+		<!-- my account body section start-->
+		<section class="order-detail-section" >
+			<div class="container">
+				<div class="row order-detail-heading">
+					<div class="col-8">
+						<div class="breadcrumbs clearfix nomobile">
+							<ul>
+								<li><a href="#" title="Home">Home</a></li>
+								<li><a href="#">My Account</a></li>
+							</ul>
+						</div>	
+						<div class="no-desc back-catagory"><a href="#"><i class="fa fa-angle-left" aria-hidden="true"></i>My Account</a></div>
+						<h1>Order no : 60000 000 000 0000</h1>
+					</div>
+					<div class="col-5">
+			            <p>The Fay Store’s mission is to help you make positive changes and learn more about the alternatives out there. Whether you’re looking for ideas, knowledge, or just some cool stuff – we’re here to inspire you!</p>
+			        </div>	
+				</div>
+				<div class="row detail-content">
+					<div class="col-6">
+						<div class="delivery-address">	
+							<h3>Delivery Address</h3>
+							<h4>Patrick Cruz</h4>
+							<p class="street">No.57, CP Ramaswami Road Alwarpet</p>
+							<p class="pin-code">Chennai 600018</p>
+							<p class="state">Tamil Nadu</p>
+							<p class="country">India</p>
+							<p class="number">+91 9677719114</p>
+						</div>
+					</div>
+					<div class="col-6 track-btn">
+						<div class="form-row remove-space">
+		              		<div class="button button-secondary ">
+		              			<button>Track order</button>
+		              		</div>
+		            	</div>
+					</div>
+				</div>
+				<!-- <div class="row">
+					<div class="col-12 card-title ">
+						<div class="order-card">
+							<div class="row">
+								<div class="col-6">
+									<div class="row">
+										<div class="col-2">
+											<h4 class="list-item">PRODUCT</h4>
+										</div>
+									</div>
+								</div>
+								<div class="col-6 adjust-content">
+									<div class="row">
+										<div class="col-4">
+											<div class="order-listitem">
+												<h4 class="list-item">QUANTITY</h4>
+											</div>
+										</div>
+										<div class="col-4">
+											<div class="order-listitem">
+												<h4 class="list-item">UNIT PRICE</h4>
+											</div>
+										</div>
+										<div class="col-4 prod-price">
+											<div class="order-listitem">
+												<h4 class="list-item">AMOUNT</h4>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-12">
+						<div class="order-card">
+							<div class="row">
+								<div class="col-6">
+									<div class="row">
+										<div class="col-2">
+											<div class="order-img">
+												<img src="images/ac.jpg">
+											</div>
+										</div>
+										<div class="col-6">
+											<p class="prod-dis">Daikin ATKL50TV16U Split Air Conditioner(1.5 ton, 3 star-Inverter)</p>
+										</div>
+									</div>
+								</div>
+								<div class="col-6 adjust-content">
+									<div class="row">
+										<div class="col-4">
+											<div class="order-listitem">
+												<p class="list-item inner-content">1</p>
+											</div>
+										</div>
+										<div class="col-4">
+											<div class="order-listitem">
+												<p class="list-item inner-content">₹67,980</p>
+											</div>
+										</div>
+										<div class="col-4 prod-price">
+											<div class="order-listitem">
+												<p class="list-item"> ₹67,980</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row ">
+					<div class="col-12 card-title ">
+						<div class="card-price">
+							<div class="row">
+								<div class="col-4 offset-md-8">
+									<div class="row">
+										<div class="col-6">
+											<div class="order-listitem">
+												<p class="list-item">Voucher Discount</p>
+											</div>
+										</div>
+										<div class="col-6 prod-price">
+											<div class="order-listitem">
+												<p class="list-item">&#8377; 3000</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row ">
+					<div class="col-12 card-title ">
+						<div class="card-price">
+							<div class="row">
+								<div class="col-4 offset-md-8">
+									<div class="row">
+										<div class="col-6">
+											<div class="order-listitem">
+												<p class="list-item">Shipping </p>
+											</div>
+										</div>
+										<div class="col-6 prod-price">
+											<div class="order-listitem">
+												<p class="list-item">&#8377; 300</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-12 card-title ">
+						<div class="order-card">
+							<div class="row ">
+								<div class="col-4 offset-md-8">
+									<div class="row total-margin">
+										<div class="col-6">
+											<div class="order-listitem">
+												<h4 class="list-item">TOTAL</h4>
+											</div>
+										</div>
+										<div class="col-6 prod-price">
+											<div class="order-listitem">
+												<h4 class="list-item">&#8377; 66,280</h4>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div> -->
+				<!-- <div class="row">
+					<table class="cart-table order-table" width="100%" border="0" cellpadding="15">
+						<thead class="order-design">
+							<tr>
+								<th class="woocommerce-orders-table__header woocommerce-orders-table__header-order-number">
+									<span class="nobr">Order No.</span>
+								</th>
+								<th class="woocommerce-orders-table__header woocommerce-orders-table__header-order-quantity">
+									<span class="nobr">Quantity</span>
+								</th>
+								<th class="woocommerce-orders-table__header woocommerce-orders-table__header-order-date">
+									<span class="nobr">Date</span>
+								</th>
+								<th class="woocommerce-orders-table__header woocommerce-orders-table__header-order-status">
+									<span class="nobr">Status</span>
+								</th>
+								<th class="woocommerce-orders-table__header woocommerce-orders-table__header-order-total">
+									<span class="nobr">Total</span>
+								</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr class="clearfix cart-list">
+								<td class="product-subtotal sub-total" data-title="Order No.">
+									<span>
+										<a href="#!">1640</a>
+									</span>
+								</td>
+								<td class="product-subtotal sub-total" data-title="Quantity">
+									<span>1</span>
+								</td>
+								<td class="product-subtotal sub-total" data-title="Date">
+									<span>
+										<time datetime="2019-07-03T13:01:13+00:00">July 3, 2019</time>
+									</span>
+								</td>
+								<td class="product-subtotal sub-total" data-title="Status">
+									<span>Cancelled</span>
+								</td>
+								<td class="product-subtotal sub-total" data-title="Total">
+									<span>
+										<span class="woocommerce-Price-amount amount">
+											<span class="woocommerce-Price-currencySymbol">£</span>
+											5.64
+										</span>
+									</span>
+								</td>
+							</tr>
+							<tr class="clearfix cart-list">
+								<td class="product-subtotal sub-total" data-title="Order No.">
+									<span>
+										<a href="#!">1639</a>
+									</span>
+								</td>
+								<td class="product-subtotal sub-total" data-title="Quantity">
+									<span>1</span>
+								</td>
+								<td class="product-subtotal sub-total" data-title="Date">
+									<span>
+										<time datetime="2019-07-03T12:55:55+00:00">July 3, 2019</time>
+									</span>
+								</td>
+								<td class="product-subtotal sub-total" data-title="Status">
+									<span>Completed</span>
+								</td>
+								<td class="product-subtotal sub-total" data-title="Total">
+									<span>
+										<span class="woocommerce-Price-amount amount">
+											<span class="woocommerce-Price-currencySymbol">£</span>
+											7.19
+										</span>
+									</span>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div> -->
+				<table class="cart-table" width="100%" border="0" cellpadding="15">
+					<thead>
+						<tr>
+							<!-- <th class="product-remove">&nbsp;</th>
+							<th class="product-thumbnail">&nbsp;</th> -->
+							<th class="product-name">Product Name</th>
+							<th class="product-quantity">Quantity</th>
+							<th class="product-price">Unit Price</th>
+	                     	<th class="no-desc">Discounted Price</th>
+							<th class="product-subtotal">Amount</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr class="cart_item clearfix cart-list">
+							<td class="product-name">
+								<div class="clearfix cart-list-blk">
+									<a href="https://www.thefaystore.com/shop/household/stainless-steel-bottles/?attribute_choose-a-pattern=Coconut"><img src="https://www.thefaystore.com/wp-content/uploads/2019/06/qwetch-stainless-steel-bottle-coconuts-300x300.jpg" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="" srcset="https://www.thefaystore.com/wp-content/uploads/2019/06/qwetch-stainless-steel-bottle-coconuts-300x300.jpg 300w, https://www.thefaystore.com/wp-content/uploads/2019/06/qwetch-stainless-steel-bottle-coconuts-150x150.jpg 150w, https://www.thefaystore.com/wp-content/uploads/2019/06/qwetch-stainless-steel-bottle-coconuts-100x100.jpg 100w" sizes="(max-width: 300px) 100vw, 300px"></a>
+									<div class="cart-title">
+										<a href="#!" class="proTitle">
+											<h2>Stainless Steel Bottles</h2>
+										<h3>for both hot and cold drinks - Coconut</h3>
+										</a>										
+									</div>					
+								</div>
+							</td>
+							<td class="formCol" data-title="Quantity">
+								<div class="qtymodify">
+									2
+								</div>
+							</td>
+							<td data-title="Unit Price" class="product-subtotal sub-total">
+		            			<span class="rupee">£ 24.99</span>
+							</td>
+							<td data-title="Total price" class="product-subtotal sub-total">
+								<span class="woocommerce-Price-amount amount">
+									£ 49.98
+								</span>					
+							</td>
+						</tr>
+						<tr class="checkouttotal">
+						  	<td colspan="4" class="checkouttotaltd">
+							    <div class="cart-collaterals">
+							    </div>
+							    <table class="discount-wrapper fR structure" cellspacing="0" cellpadding="0" border="0">
+							      	<tbody>
+							       		<tr>
+									     	<td id="carttd" colspan="2" class="remove-pad">
+											     <div class="common-discount">
+											     	<div class="clearfix" id="voucherInner">
+												   		<div class="search-shop voucherCodeFiled">
+													 		<div class="addvoucher">
+													 			<i class="fa fa-plus" aria-hidden="true"></i> Add a voucher code
+													 		</div>
+									  						<div class="btn-pos applybutd">
+											                  	<input type="text" name="coupon_code" class="textBox" id="coupon_code" maxlength="99" value="" autocomplete="off">
+											               		<button type="button" class="button-primary btn button" id="discount-button" name="apply_coupon">Apply Code</button>
+											               		<div class="close-voucher">
+											               			<i class="fa fa-times" aria-hidden="true"></i>
+											               		</div>
+				                  								<div class="tick-box"></div>
+			                      								<div class="preloader-black"></div>
+														  	</div>
+								  						</div>
+									  					<div class="error-message-custom" style="display:none">Please enter a voucher code</div>
+									  					<!-- <div class="error-message-invalid" style="display:none">Invalid voucher code</div> -->
+									  	                <div class="tryagain">Oops! This code is not valid. <a href="javascript:void(0)">Want to try again?</a></div>
+														<input type="hidden" id="_wpnonce" name="_wpnonce" value="9070d0a4ef" class="input-email-active"><input type="hidden" name="_wp_http_referer" value="/shopping-bag/" class="input-email-active">
+											        </div>
+								    			 </div>
+							      			 </td>
+							     		</tr>
+										<tr class="woocommerce-shipping-totals shipping">
+											<th style="text-transform: none;">Shipping</th>
+											<!-- <td style="padding-bottom: 30px;">Shipping</td> -->
+											<td data-title="Shipping">
+												<ul id="shipping_method" class="woocommerce-shipping-methods">
+													<li>
+														<input type="radio" name="shipping_method[0]" data-index="0" id="shipping_method_0_free_shipping14" value="free_shipping:14" class="shipping_method input-email-active" checked="checked">
+														<label for="shipping_method_0_free_shipping14">£0.00</label>			
+													</li>
+													<li style="display: none;">
+														<input type="radio" name="shipping_method[0]" data-index="0" id="shipping_method_0_flat_rate13" value="flat_rate:13" class="shipping_method input-email-active"><label for="shipping_method_0_flat_rate13"> <span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">£</span>2.99</span></label>			
+													</li>
+												</ul>
+												<p class="woocommerce-shipping-destination"></p>
+											</td>
+										</tr>
+										<tr class="total-blk">
+											<td><strong>TOTAL</strong></td>
+											<td><span><strong><span class="woocommerce-Price-amount amount"><span class="woocommerce-Price-currencySymbol">£</span>49.98</span></strong> </span></td>
+										</tr>
+							  		</tbody>
+							  	</table>
+							</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</section>
+		<!-- my account body section ends-->
+		<footer>
+			<div class="container">
+				<div class="row aligncontent">
+					<div class="col-3 copyright">
+						<div class="footeritems">
+							<a class="mob-show no-effect" href="#!">
+								<img src="images/logo.png" />	
+							</a>
+							<a class="mob-hide no-effect" href="#!">
+								<img src="images/foot-logo.png" />
+							</a>
+							<p> &copy; 2019 Viveks. All right reserved.</p>
+						</div>
+						<p>New No 68, Old No 150, 2nd Floor,<br/> Luz Church Road, Mylapore, Chennai,<br/> Tamil Nadu 600004</p>
+						<div class="socilogo">
+							<a href="#!" class="no-effect"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+							<a href="#!" class="no-effect"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+						</div>
+					</div>
+					<div class="col-5 footerhide">
+						<div class="listfooter">
+							<ul class="clearfix">
+								<li>
+									<a href="#">ABOUT US</a>
+								</li>
+								<li>
+									<a href="#">MY ACCOUNT</a>
+								</li>
+								<li>
+									<a href="#">TERMS OF SALE</a>
+								</li>
+                                <li>
+                                	<a href="#">MY ORDERS</a>
+                                </li>
+                                <li>
+                                	<a href="#">RETURN POLICY</a>
+                                </li>
+                                <li>
+                                	<a href="#">CONTACT US</a>
+                                </li>
+								<li>
+									<a href="#">PRIVACY POLICY</a>
+								</li>
+                                <li>
+                                	<a href="#">BLOG</a>
+                                </li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-4 footerhide emailtext">
+						<p>Sign up to get exclusive offers.</p>
+						<div class="emailpartinput">
+							<input type="text"  name="fff" placeholder="Enter your email address">
+							<button type="button">SIGNUP</button>
+						</div>
+						<div class="payment-icon-con">
+							<ul>
+								<li>
+									<div class="payment-icon">
+										<img src="images/pay1.png">
+									</div>
+								</li>
+								<li>
+									<div class="payment-icon">
+										<img src="images/pay2.png">
+									</div>
+								</li>
+								<li>
+									<div class="payment-icon">
+										<img src="images/pay3.png">
+									</div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer> 
+	</div>
+</div>
+<script>
+  	var jsArr = ['js/app.js'];
+	for(var j = 0; j < jsArr.length; j++) {
+        var script = document.createElement('script')
+        script.setAttribute('type', 'text/javascript')
+        script.setAttribute('src', jsArr[j])
+        document.getElementsByTagName('head')[0].appendChild(script)
+    }
+</script>
+
+</body>
+</html>

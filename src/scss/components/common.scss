@@ -12,6 +12,33 @@
 	text-align: center;
 	line-height: 18px;
 }
+.border-line{
+	width: 100%;
+	border-bottom: 1px solid $line-color;
+	padding-bottom: 10px;
+	margin-bottom: 20px;
+}
+.text{
+	&-red{
+		font-family: $nunito-bold;
+		font-size: 14px;
+		line-height: 19px;
+		letter-spacing:2px;
+		color: $crimsonRed;
+		text-transform: uppercase;
+		cursor: pointer;
+		&.off{
+			letter-spacing: 0px;
+			cursor: text;
+		}
+	}
+	&-blue{
+		font-family: $nunito-bold;
+		font-size: 14px;
+		line-height: 20px;
+		color: $darkCeruleanBlue;
+	}
+}
 @media screen and (max-width: 321px) {
 	.intro-label{
 		padding: 5px 10px;

@@ -1,0 +1,69 @@
+.popup{
+	&-section{
+		position: absolute;
+		width: 100%;
+		min-height: 100%;	
+		@include background(rgba($black, .5));
+		z-index: 9;
+		display: none;
+	}
+	&-content{
+		position: fixed;
+		top: 50%;
+		left: 50%;
+		@include transform(translate(-50%,-50%));
+		background-color: $white;
+		border-radius: 8px;
+		padding: 50px;
+		.close-icon{
+			position: absolute;
+			cursor: pointer;
+		    top: -35px;
+    		right: 5px;
+		}
+		&.emi{
+			display: none;
+			min-width: 950px;
+			min-height: 550px;
+		}
+		&.warranty{
+			display: none;
+			width: 660px;
+			min-height: 430px;
+			.col-1{
+				padding-left: 0px;
+			}
+		}
+		.pro-tab{
+			margin-left: -50px;
+			margin-right: -50px;
+			padding-left: 50px;
+			padding-right: 50px;
+		}
+		.emi-con{
+			display: none;
+			&.active{
+				display: block;
+			}
+		}
+		.emi-tab{
+			padding-right: 0px;
+			padding-top: 25px;
+		}
+		.plan-con{
+			padding: 25px 40px 45px 40px;
+			margin: 0px -15px;
+			border-left: 1px solid $line-color;
+			table{
+				width: 100%;
+			}
+			td{
+				padding-top:10px;
+				padding-bottom: 10px; 
+				max-width: 33.33%;
+				font-size: 14px;
+				line-height: 20px;
+			}
+		}
+	}
+}

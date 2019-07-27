@@ -2,27 +2,11 @@
 	.myaccount-heading{
 		padding-bottom: 20px;
 	}
-	.myaccount-sidetab{
-		li{
-			cursor: pointer;
-			padding:12px 20px;
-			margin: 0px;
-	    	color: $black;
-	    	font-weight: bold;
-	    	&.active{
-				background-color:$primary-color;
-				color:$white;
-	    	}
-	    	&:before{
-	    		display:none;
-	    	}
-		}
-	}
 	.myaccount-tab{
 		padding-right: 0px;
 	}
 	.myaccount-form{
-		border-left: 1px solid #E6E6E6;
+		border-left: 1px solid $line-color;
 		padding-left: 60px;
 		margin-bottom: 25px;
 		.account-names{
@@ -49,6 +33,12 @@
 		}
 	}
 	.myaccount-subform{
+		h3{
+			color: $darkGray2;
+			font-family: $nunito-semibold;
+			font-size: 24px;
+			line-height: 30px;
+		}
 		.subwrap{
 			padding-bottom: 0px;
 		}
@@ -65,13 +55,8 @@
 		.input-adjust{
 			padding-top:25px;
 		}
-	}
-	.brand-block{
-		&.myaccount{
-			width: 100%;
-			border-bottom: 1px solid #E6E6E6;
-			padding-bottom: 10px;
-			margin-bottom: 20px;
+		.my-slide{
+			display: none;
 		}
 	}
 	.address-card-con{
@@ -81,18 +66,33 @@
 			}
 		}		
 	}	
-	.myaccount-address-card{
-		background: $white;
-		padding: 25px;
-		p{
-			padding-bottom: 0px;
-		}
-		.myaccount-phone-number{
-			padding-bottom: 25px;
-			padding-top: 20px;
-		}
+}
+.sidetab{
+	li{
+		cursor: pointer;
+		padding:12px 20px;
+		margin: 0px;
+    	color: $primary-color;
+    	font-weight: bold;
+    	&.active{
+			background-color:$lightblue;
+			color:$black;
+			margin-left: -4px;
+			border-left:4px solid $primary-color;
+
+    	}
+    	&:before{
+    		display:none;
+    	}
 	}
-}	
+}
+.myaccount-address-card{
+	background: $white;
+	padding: 20px 30px 30px 30px;
+	p{
+		line-height: 22px;
+	}
+}
 .button-group{
 	@include display-flex;
 	justify-content: space-between;
@@ -108,8 +108,50 @@
 .order-card{
 	background: $white;
 	padding: 20px;
-	.prod-dis{
-		padding-bottom: 10px;
+	font-family: $nunito-semibold;
+	.col-7{
+		text-align: center;
+	}
+	&.on-progress{
+		.status{
+			color: $california-yellow;
+		}
+	}
+	&.delivered{
+		.status{
+			color: $chateau-green;
+		}
+	}
+	&.cancelled{
+		.status{
+			color: $crimsonRed;
+		}
+	}
+	.card-particulars{
+		font-size: 14px;
+		line-height: 19px;
+		font-family: $nunito-bold;
+	}
+	a{
+		font-family: $nunito-bold;
+		font-size: 12px;
+		letter-spacing: 1.7px;
+		line-height: 16px;
+		color: $crimsonRed;
+		border-bottom: 1px solid $crimsonRed;
+		&:before{
+			display:none;
+		}
+	}
+	h6{
+		font-size: 14px;
+		line-height: 18px;
+		color: $chinese-silver;
+		letter-spacing: 1px;
+	}
+	h4{
+		color: $chinese-silver;
+		letter-spacing: 1px;
 	}
 	p{
 		padding: 0px;
@@ -133,6 +175,8 @@
 	color: $black;
 	right: 0;
 	top: 0;
+	height:12px;
+	width: 22px; 
 	display: none;
 	&.i-hidden{
 		color: #aaa;
@@ -151,7 +195,7 @@
 }
 .address-section{
 	display: none;
-	&.book{
+	&.active{
 		display: block;
 	}
 }
@@ -173,20 +217,6 @@
 			}
 		}
 		.myaccount-subform{
-			.subformtab{
-				display: none;
-				&.active{
-					display: block;
-				}
-			}
-			&:last-child{
-				h2{
-					border-bottom:1px solid #262626;
-					&.active{
-						border-bottom: 0px; 
-					}
-				}
-			}
 			border: 0px;
 			&.myaccount{
 				margin-bottom: 0px;
@@ -196,7 +226,7 @@
 				font-size: 16px;
 				line-height: 22px;
 			}
-			h2{
+			.my-slide{
 			    display: block;
 			    border-top: 1px solid #262626;
 			    padding: 18px 45px 18px 0px;
@@ -226,7 +256,15 @@
 					&:after {
 						content: "\f068";
 					}
-				} 
+				}
+			}
+			&:last-child{
+				.my-slide{
+					border-bottom: 1px solid $black;
+					&.active{
+						border-bottom: 0px;
+					}
+				}
 			}
 		}
 	}
@@ -235,17 +273,6 @@
 	.myaccount-section{	
 		.myaccount-tab{
 			padding: 0px;
-		}
-		.myaccount-sidetab{
-			ul{
-				@include display-flex;
-				border-bottom: 1px solid $black;
-				padding: 0;
-				margin-bottom: 20px;
-			}
-			li{
-				padding: 8px 9px;
-			}
 		}
 		.myaccount-form{
 			border: none;
