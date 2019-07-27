@@ -126,14 +126,14 @@
 		font-size: 18px;
 		line-height: 24px;
 		padding-bottom: 15px;
-		strike {
+		.strike_text {
 			color: #8A8A8A;
 			font-family: $nunito-bold;
 			font-size: 14px;
 			color: #8A8A8A;
 			line-height: 20px;
 		}
-		span {
+		.offer_text {
 			font-family: $nunito-bold;
 			font-size: 14px;
 			color: #EC1C24;
@@ -216,7 +216,7 @@
 	}
 	.card_con {
 		.card_top:before {
-			right: 15px;
+			top: 0px;
 		}
 		h5 {
 			font-size: 14px;
@@ -227,14 +227,21 @@
 		h6 {
 			font-size: 11px;
 		}
+		.card_img {
+			@include width-height (172px,108px);
+			margin: 0 auto;
+		}
 	}
-	.line-strike-content {
-		letter-spacing: 0px;
+	.line-strike{
+		padding-bottom: 5px;
+		&-content {
+			letter-spacing: 0px;
+		}
 	}
 
 }
 @media screen and (max-width: 768px) {
-	.card_con .offers_List span {
+	.card_con .offers_List offer_text {
 		display: block;
 		padding-top: 15px;
 	}

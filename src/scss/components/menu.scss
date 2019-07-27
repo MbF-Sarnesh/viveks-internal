@@ -222,11 +222,12 @@
 			}
 		}
 		&-items {
-			padding: 35px 35px 35px 15px;
+			padding: 25px 35px 15px 15px;
 			&-ads {
 				display: none;
 			}
 			&-sublist {
+				padding-bottom: 13px;
 				width: 100%;
 				max-width: 100%;
 				a {

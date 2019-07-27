@@ -436,6 +436,9 @@ iframe{
     }
   }
 }
+.strike_text {
+  text-decoration:line-through;
+}
 @media screen and (max-width: 1024px) { 
   .mob-show{
     display: inline-block;
@@ -450,6 +453,9 @@ iframe{
     &:before,&:after {
       display:none;
     }
+  }
+  .space-bottom {
+      padding-bottom: 45px;
   }
 }
 @media screen and (max-width: 768px) {  
