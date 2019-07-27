@@ -1,33 +1,12 @@
 header{
 	background-color: $header-bg;
-	height: 60px;
 	padding: 12px 0;
-	position: relative;
 	nav{
 		@include display-flex;
 		/*@include justify-content(space-between);*/
 		@include align-items(center);
 	}
-	.img-hover{
-        display: none;  
-    }
-    a,.search-close{
-        &:hover{
-            .img-hover{
-                display: inline-block;  
-            }       
-            .img-normal{
-                display: none;             
-            }
-        }
-    }
 }
-.home-header {
-	.container {
-		position: relative;
-	}
-}
-
 .mobiMenu{
 	.menuHum{
 		&.open{
@@ -46,7 +25,7 @@ header{
 	    left: 50%;
 	    font-size: 12px;
 	    line-height: 1;
-	    font-family: $nunito-bold;
+	    font-family: $quicksand-bold;
 	    @include transform(translateX(-50%));
 	}
 	a{
@@ -67,9 +46,11 @@ header{
 .menuHum { 
   cursor:pointer; 
   display:none;
-  padding:7px 5px; 
+  padding:10px; 
   position:fixed; 
-  right:20px; 
+  right:10px; 
+  bottom:40px; 
+  width:53px; 
   z-index:19;
   span { 
     background-color: $white; 
@@ -89,36 +70,27 @@ header{
 nav{
 	li{
 		display: inline-block;
-		padding: 0 15px 0px 0px;
+		padding: 0 14px;
 		vertical-align: middle;
 		&:first-child{
 			padding-left:0;
 		}
 	}
 	.left-nav{
-		white-space: nowrap;
-		li{	
+		li{
+			margin-left: 40px;
 			&:first-child{
 				padding-left:0px;
+				margin-left: 0px;
 			}
 			&.dropdown{
 				a{
 					padding-right: 25px;
+					&:before{
+						display:none;
+					}
 					&:after{
 						display:inline-block;
-					}
-				}
-			}
-			&.classOne {
-				/*a:before {
-					opacity: 1;
-					visibility: visible;
-				}*/
-				a {
-					color: $black;
-					&:after {
-						content:'\f106';
-						color: $black;
 					}
 				}
 			}
@@ -126,9 +98,9 @@ nav{
 	}
 	a{
 		color: $white;
-		font-size: 16px;
-		font-family: $nunito-bold;
-		line-height: 24px;
+		font-size: 14px;
+		font-family: $quicksand-bold;
+		line-height: 22px;
 		@include transition(all .3s ease 0s);
 		position: relative;
 		letter-spacing: 0px;
@@ -139,7 +111,6 @@ nav{
 			&:before{
 				width:100%;
 			}
-			
 		}
 		&:before{
 			content: '';
@@ -156,7 +127,7 @@ nav{
 			display: none;
 		    content: "\f107";
 		    color: white;
-		    font-size: 24px;
+		    font-size: 16px;
 		    font-family: $font-awesome;
 		    @include position(absolute, $top:50%,$right: 0px);
 		    @include transform(translateY(-50%));
@@ -164,16 +135,11 @@ nav{
 	}
 	.fR{
 		li{
-			padding: 0 8px;
+			padding: 0 6px;
 			&:last-child{
 				padding-right:0;
 			}
 		}
-	}
-}
-.right-nav {
-	img {
-		max-height: 25px;
 	}
 }
 .header-imgage{
@@ -206,19 +172,62 @@ nav{
 		}
 	}
 }
-.mobiMenu{ 
-		background-color: $white; 
+
+@media screen and (max-width: 1000px) {
+	.mobiMenu, .menuHum{
+		display: block;
+	}
+	.mobiMenu{
+		display: none;
+	}
+	body, header, {
+	    -webkit-transition: all .3s ease-in;
+	    -moz-transition: all .3s ease-in;
+	    -o-transition: all .3s ease-in;
+	    transition: all .3s ease-in;
+	}
+	.mobiMenu, .menuHum{ display: inherit;}
+	.menuHum{
+		position: absolute;
+		top: 50%;
+		right: 0px;
+		height: 32px;
+		@include transform(translateY(-50%));
+		span{
+			@include transition-duration(0.3s);
+		}
+		&.open{
+			padding-top: 14px;
+			top:34px;
+			span{
+				&:nth-child(1){
+					background: $white;
+					@include transform(rotate(45deg) translate(4px, 4px));
+				}
+				&:nth-child(2){
+					opacity: 0;
+				}
+				&:nth-child(3){
+					background: $white;
+					@include transform (rotate(-45deg) translate(6px, -6px));
+				}
+			}
+		}
+	}
+	.mobiMenu{ 
+		background-color: $black; 
 		overflow-y: auto; 
-	    padding-top: 35px;
+	    padding-top: 55px;
 		z-index: 15;
 		width: 100%;
 		@include transform(translateY(-100%));
 		@include position(fixed, $top: 0px, $left:0);
 		bottom: 0;
 		a {
-			color: #EC1C24;
+			border-bottom: 1px solid #ccc;
+			color: white;
 			display: block; 
-			font-family: $nunito-bold;
+			font-family: $quicksand-bold;
 			letter-spacing: 1px;
 			padding: 20px; 
 			text-transform: uppercase;
@@ -226,40 +235,16 @@ nav{
 			text-align: left;	
 			font-size: 14px;
 			line-height: 20px;
-			span {
-				padding-left: 10px;
-				vertical-align: bottom;
-			}
 		}
 		li{
-			border-bottom: 1px solid #ccc;
 			&:last-of-type{
 				a {
 					border-bottom:none;
 				}	
 			}
-			a {
-				font-size: 14px;
-				font-family: $nunito-bold;
-				line-height: 20px;
-				vertical-align:-webkit-baseline-middle;
-				padding: 15px;
-			    text-transform: none;
-			    letter-spacing: initial;
-			    color: #EC1C24;
-			}
-			ul{
-				display: none;
-				li,a{
-					border-bottom: none;
-				}
-			}
 		}
 		ul{
 			@include transition(all .5s ease 0s);
-			&:first-child {
-				border-top: 1px solid #ccc;
-			}
 		}
 		&.open{
 			ul:not(.multimenu){
@@ -331,93 +316,10 @@ nav{
 				background-color: red;
 			}
 		}
-	img {
-		height: 25px !important;
-    	vertical-align: middle !important;
 	}
-	.show {
-		display: none;
-	}
-	.slides{
-		.show {
-			display: inline-block;
-		}
-		.hide {
-			display: none;
-		}
-		span {
-			color: $black;
-		}
-		.mobiMenu a {
-			border-bottom: none;
-		}
-	}
-	.catagory {
-		position: relative;
-		&:after{
-		    content: "\f107";
-		    color: $crimsonRed;
-		    font-size: 24px;
-		    font-family: $font-awesome;
-		    transition-duration: .5s;
-		    @include position(absolute, $top:50%,$right: 15px);
-		    @include transform(translateY(-50%));
-		}
-		&.slides {
-			&:after {
-				transform: rotate(-180deg);
-			}
-		}
-	}
-}
-
-@media screen and (max-width: 1024px) {
-	.mobiMenu, .menuHum{
-		display: block;
-	}
-	.mobiMenu{
-		display: none;
-		text-align: left;
-		h5 {
-			border-bottom: 1px solid #cccccc;
-			padding: 20px 15px;
-		}
-	}
-	body, header, {
-	    -webkit-transition: all .3s ease-in;
-	    -moz-transition: all .3s ease-in;
-	    -o-transition: all .3s ease-in;
-	    transition: all .3s ease-in;
-	}
-	.mobiMenu, .menuHum{ display: inherit;}
-	.menuHum{
-		position: absolute;
-		top: 0px;
-		right: 20px;
-		height: 30px;
-		span{
-			@include transition-duration(0.3s);
-		}
-		&.open{
-			padding-top: 14px;
-			top:14px;
-			@include transform(none);
-			span{
-				&:nth-child(1){
-					background: $crimsonRed;
-					@include transform(rotate(45deg) translate(4px, 4px));
-				}
-				&:nth-child(2){
-					opacity: 0;
-				}
-				&:nth-child(3){
-					background: $crimsonRed;
-					@include transform (rotate(-45deg) translate(6px, -6px));
-				}
-			}
-		}
-	}
-	
+	/*.header{
+		width: 80%;
+	}*/
 	nav{
 		@include justify-content(space-between);
 	}
@@ -438,7 +340,7 @@ nav{
 		z-index: 9999;
 		top: 0;
 		width: 100%;
-		height: 54px;
+		/*height: 65px;*/
 		/*.fR{
 			display: none;
 		}*/
@@ -463,7 +365,7 @@ nav{
 		}
 	}
 	.left-nav{
-		display: none !important;
+		display: none;
 	}
 	.logo{
 		text-align: left;
@@ -472,22 +374,10 @@ nav{
 		/*padding-top: 5px;*/
 		padding-left: 0px;
 		padding-right: 0px;
-		img {
-			vertical-align: middle;
-		}
 	}
 	.right-nav{
 		@include flex(0 0 calc(100% - 250px));
-		max-width: calc(100% - 200px);
-		img {
-			height: 22px;
-		}
 	}
-	.search-active{
-        .menuHum{
-            display: none;
-        }
-    }
 }
 @media screen and (max-width: 640px) {
 	.hero-banner{
@@ -509,7 +399,7 @@ nav{
 	nav{
 		.fR{
 			li{
-				padding: 0 5px;
+				padding: 0 2px;
 				&:last-child{
 					padding-right:0;
 				}
@@ -524,7 +414,6 @@ nav{
 	}
 	.right-nav{
 		@include flex(0 0 calc(100% - 160px));
-		max-width: calc(100% - 130px);
 	}
 }
 @media screen and (max-width: 321px) {

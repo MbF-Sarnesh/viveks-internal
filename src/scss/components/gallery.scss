@@ -1,13 +1,8 @@
 .gallery_section{	
-	.row:nth-child(even) {
-		flex-direction: row-reverse;
-	}
 	.row.type-0{
 		height: auto;
 		color: $white;
 		margin: 0px -10px;
-		padding-bottom: 20px;
-		flex-wrap: nowrap;
 		h2{
 			color: $white;
 			font-family: $nunito-bold;
@@ -29,17 +24,11 @@
 		}
 		.card-left-banner{
 			padding:0px 10px;
-			img {
-				width: 100%;
-				height: 100%;
-				object-fit: cover;
-				object-position: center;
-			}
 			.main_con{
 				position: relative;
-				display: block;
-				height: 600px;
-				max-height: 600px;
+				background:black;
+				/*padding: 50px 0px;*/
+				height: 100%;
 				.title{
 					text-align: center;
 				}
@@ -99,14 +88,11 @@
 	}
 }
 .section-gallery{
-	padding: 100px 0px 80px 0px;
+	padding: 66px 0px;
 }
 @media screen and (max-width: 1024px){
 	.section-gallery{
 		padding: 0px;
-		.card-left-banner,.side_img {
-			margin-bottom: 2px;
-		}
 	}
 	.gallery_section{
 		& > .container{
@@ -115,8 +101,6 @@
 		.row.type-0{
 			margin-left: 0px;
 			margin-right: 0px;
-			flex-wrap: wrap;
-			padding-bottom: 50px;
 			[class*='col-'] {
 			    max-width: 100%;
 			    @include flex(0 0 100%);
@@ -127,12 +111,6 @@
 					.side_img:nth-child(2){
 						padding-top: 0px;
 					}
-				}
-			}
-			.card-left-banner{
-				.main_con{
-					height: 100%;
-					max-height: 100%;
 				}
 			}
 		}

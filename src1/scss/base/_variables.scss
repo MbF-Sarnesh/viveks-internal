@@ -1,0 +1,162 @@
+/////////////////
+// Font-family
+////////////////
+$relative-path: '/html';
+$line-awesome:'Fontawesome', sans-serif;
+/*$serendipity:'Serendipityfont', sans-serif;*/
+$quicksand-bold: 'QuicksandBold', sans-serif;
+/*$quicksand-medium: 'QuicksandMedium', sans-serif;
+$quicksand-regular: 'QuicksandRegular', sans-serif;
+$salome-webfont: 'Salomewebfont', sans-serif;
+$Georgiaitalic-italic: 'Georgiaitalic', sans-serif;
+$Georgiaitalic-Regular: 'GeorgiaRegular', sans-serif;
+$montserrat-Medium: 'MontserratMedium', sans-serif;
+$payment-webfont : 'PaymentFont', sans-serif;
+$cormorantGaramond-Italic: 'cormorantGaramond-Italic', sans-serif;
+$montserrat-Light: 'MontserratLight', sans-serif;*/
+
+$garamond-bolditalic: 'Garamond-BoldItalic', sans-serif;
+$nunito-extrabold: 'Nunito-ExtraBold', sans-serif;
+$nunito-semibold: 'Nunito-SemiBold', sans-serif;
+$nunito-bold: 'Nunito-Bold', sans-serif;
+$nunito-black: 'Nunito-Black', sans-serif;
+$nunito-regular: 'Nunito-Regular', sans-serif;
+
+//Viveks Variables
+$crimsonRed:#EC1C24;
+$header-bg:$crimsonRed;
+$darkCeruleanBlue:#174386;
+$primary-color:$darkCeruleanBlue;
+$goldenYellow:#fbc400;
+$emiGray:#5e5e5e;
+$bgGray:#d4d4d4;
+$darkGray2:#8A8A8A;
+// Colors
+$black:#262626;
+$white:#ffffff;
+$html-bg:$black;
+$body-bg:#ebebeb; 
+$body-copy:#262626;
+$primrose:#bc2026;
+$newmessage:#869151;
+$gray:#7e7c7c;
+$graynews:#7F7C7C;
+$concrete:#DBDBDA;
+$woodland:#393c2f;
+$link-color:#d60d42;
+$dim-gray:#656565;
+$addbag-hover:#00000091;
+
+$newmessage-dark:#474c2e;	
+$dicount-bg:#F7CBCD;
+$dicount-text:#8B5D5F;
+$dicount-dark:#86181d;
+$gift-bg:#f8efb6;
+$gift-color:#918848;
+$gift-dark:#67644c;
+$selectmenuborder: #b0b0b0; 
+
+$careys-pink:#C69697;
+$button-primary:#7C1E3D;
+$secondary-color:#282020;
+$footer:#252525;
+$footerborder:#6d6d6d;
+$Barossa: #3E2A33;
+$pinkswan:#C0B4B7;
+$Sunglow:#ffc439;
+$Blue:#3f3768;	
+
+// Font Size
+$font-s:10px;
+$font-sx:11px;
+$font-sx2:18px;
+$font-lx:22px;
+$font-xx:38px;
+$font-xxxx:90px;
+
+.transitionLinear {
+	-o-transition: all 0.3s linear;
+	-moz-transition: all 0.3s linear;
+	-webkit-transition: all 0.3s linear;
+	transition: all 0.3s linear;
+}
+.transitionEase {
+	-o-transition: all 0.6s linear;
+	-moz-transition: all 0.6s linear;
+	-webkit-transition: all 0.6s linear;
+	transition: all 0.6s linear;
+}
+.transitionNone {
+	-o-transition: none !important;
+	-moz-transition: none !important;
+	-webkit-transition: none !important;
+	transition: none !important;
+}
+.appearance {
+	-o-appearance:none; 
+	-ms-appearance:none; 
+	-moz-appearance:none; 
+	-webkit-appearance:none;
+	appearance:none; 
+}
+.flex{
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+}
+@mixin justify($cont){
+	-ms-flex-pack: $cont;
+	-moz-box-pack: $cont;
+	-webkit-justify-content: $cont;
+	-webkit-box-pack: $cont;
+	justify-content: $cont;
+}
+@mixin alignitems($cont){
+	-ms-flex-align: $cont;
+	-moz-box-align: $cont;
+	-webkit-align-items: $cont;
+	-webkit-box-align: $cont;
+	align-items: $cont;
+}
+@mixin translateX($px){
+	transform:translateY($px);
+	-ms-transform:translateY($px);
+	-webkit-transform:translateY($px);
+	-moz-transform:translateY($px);
+	}
+@mixin transition-event($props:all, $duration:0.15s, $timing:linear) {
+	@include transition-property($props);
+	@include transition-duration($duration);
+	@include transition-timing-function($timing);
+}
+ 
+@mixin position($position, $top: null, $right: null, $bottom: null, $left: null) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin width-height($width, $height){
+	width:$width;
+	height:$height;
+}
+
+// Form styles
+$fm-border-thickness:1px;
+$fm-border-color:$black;
+$fm-label-bg:#ececec;
+$fm-input-bg:$white;
+
+// Form focus color
+$fm-focus-outline:$black;
+
+// Floating
+$fm-flt-label-bg:$white;
+/*$fm-flt-label-color:$gray;*/
+$active-border-color: #ababab;
+ 
+$font-awesome:$line-awesome;

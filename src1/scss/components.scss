@@ -1,0 +1,42 @@
+@import 'base/index';
+@import "media/media1";
+
+@import "components/menu";
+@import "components/header";
+@import "components/home-banner";
+@import "components/banner-card";
+@import "components/footer";
+@import "components/button";
+@import "components/subheader";
+@import "components/generic";
+@import "components/breadCrumb";
+@import "components/blockquote";
+@import "components/slick";
+@import "components/tabs";
+@import "components/accordion";
+@import "components/pagination";
+@import "components/common";
+
+@import "components/footer-viveks";
+@import "components/gallery"; 
+@import "components/productCard"; 
+@import "components/brand"; 
+@import "components/discriptionCard"; 
+@import "components/searchbar"; 
+@import "components/accordiontab";
+@import "components/myaccount";
+@import "components/signup";
+@import "components/signin";
+@import "components/contactus";
+@import "components/deliverydetails";
+@import "components/payment";
+@import "components/physicalcard";
+@import "components/cover-banner";
+
+
+
+/*form*/
+@import "form/_floating-form";
+@import "form/form";
+@import "form/_checkboxradio";
+@import "form/_selectmenu.scss";

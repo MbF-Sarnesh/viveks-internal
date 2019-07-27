@@ -1,0 +1,274 @@
+.home-banner-slider {
+	.slick-dots {
+	    position: absolute;
+	    bottom: 15px;
+	    transform: translateX(-50%);
+	    left: 50%;
+	    li {
+	    	background-color:rgba(255,255,255,0.6);
+	    	opacity: 1;
+	    }
+	    .slick-active {
+	    	@include width-height(24px,10px);
+	    	background-color:$crimsonRed;
+		    border-radius: 6px;
+	    }
+	}
+}
+.hero{
+	&-banner{
+		position: relative;
+		&-inner{
+			position: relative;
+		}
+		&-content{
+			position: relative;
+			height: 680px;
+			.container{
+				height: 100%;
+				position: relative;
+			}
+			img{
+				@include position(absolute, $top:0px, $left: 0px);
+				width: 100%;
+				height: 680px;
+				object-fit: cover;
+				object-position: center;
+			}
+			> a{
+				display: block;
+			}
+		}
+		&-intro{
+			padding-bottom: 10px;
+		}
+		&-caption{
+			z-index: 1;
+			height: 100%;
+			@include display-flex;
+			/*@include align-items(flex-end);*/
+		    @include flex-direction(column);
+    		@include justify-content(flex-end);
+			color: white;
+			@include position(absolute, $bottom:190px, $left: 15px);
+			max-width: 960px;
+			h1{
+				color: white;
+				padding-bottom: 10px;
+				line-height: 60px;
+			}
+			p{
+				font-size: 35px;
+				line-height: 42px;
+				letter-spacing: -1px;
+				font-family: $nunito-bold;
+				padding-bottom: 10px;
+				/*&:last-of-type{
+					padding-bottom:0px;
+				}*/
+			}
+		}
+		&-nav{
+			/*@include display-flex;*/
+			@include position(absolute, $bottom:20px, $left: 0px);
+			width: 100%;
+			.slick-track{
+				@include display-flex;
+				@include align-items(baseline);
+			}
+		}
+		&-price{
+			background-color: $crimsonRed;
+			font-family: $nunito-black;
+			font-size:24px;
+			line-height: 30px;
+			max-width: 430px;
+			padding: 12px 0px;	
+			position: relative;
+			strong{
+				display: inline-block;
+    			font-size: 35px;
+    			font-family: $nunito-bold;
+				padding-right: 5px;
+    			letter-spacing: -1px;
+				line-height: 42px;
+				vertical-align: middle;
+				margin: 0px;
+				&:last-of-type{
+					padding-right: 0px;
+				}
+			}
+			&:before{
+				content: "";
+				@include position(absolute, $top:0px,$bottom:0px,$right:0px,$left: -2000px);
+				background-color: $crimsonRed;
+				z-index: -1;
+			}
+			.strike_text {
+			  text-decoration:line-through;
+			  font-size: 18px;
+			  vertical-align: bottom;
+			}
+			.offer_text {
+			  font-size: 18px;
+			  vertical-align: bottom;
+			}
+		}
+		
+		.intro-label {
+			letter-spacing: 1px;
+			margin-bottom: 22px;
+		}
+	}
+	&-slide{
+		cursor: pointer;
+		& > div{
+			@include display-flex;
+			@include flex-direction(column);
+			@include align-items(center);
+    		@include justify-content(center);
+		}
+		span{
+			color: white;
+			font-family: $nunito-bold;
+			padding-top: 10px;
+		}
+	}
+}
+.hero-tab{
+	display: none;
+	&.active {
+		display:block;
+	}
+	&-nav{
+		background-color: #174386;
+		ul{
+			@include display-flex;
+			@include align-items(center);
+			@include justify-content(center);
+		}
+		li{
+			padding: 20px 20px;
+			position: relative;
+			a{
+				color: $white;
+			}
+			&:before{
+				content:"";
+			    border-left: 12px solid transparent;
+			    border-right: 12px solid transparent;
+			    border-bottom: 10px solid #174386;
+			    width: 0;
+			    height: 0;
+			    @include position(absolute, $top:-10px,$left: 50%);
+			    @include transform(translateX(-50%));
+				opacity: 0;
+			}
+			&.active{
+				a{
+					color: #fbc400;
+				}
+				&:before{
+					opacity: 1;
+					@include transition(opacity .5s ease 0s);
+				}
+			}
+		}
+	}
+}
+.hero-svg{
+	@include mask-position(center);
+	@include mask-size(initial);
+	@include mask-repeat(no-repeat,no-repeat);
+	@include mask-origin(initial);
+	@include mask-clip(initial);
+    background-color: white;
+    height: 50px;
+}
+@media only screen and (max-width:1400px) and (max-height:650px){
+	.hero{
+		&-banner{
+			&-content{
+					height: 523px;
+				img{
+					height: 523px;
+				}
+			}
+		}
+	}
+}
+@media screen and (max-width: 1024px) {
+	.hero-tab{
+		&-nav{
+			overflow: auto;
+			ul{
+				@include justify-content(flex-start);
+			}
+			li{
+				padding: 20px 20px;
+			    flex: 0 0 auto;
+			}
+		}
+	}
+	.hero{
+		&-banner{
+			&-intro{
+			    padding: 0px 15px 10px;
+			}
+			&-content{
+				height: calc(90vh - 111px);
+				img{
+					height: calc(90vh - 111px);
+				}
+			}
+			&-caption{
+				@include align-items(flex-start);
+				left: 0px;
+				bottom:150px;
+				max-width: 100%;
+				text-align: left;
+				h1{
+					font-size: 30px;
+					line-height: 36px;
+				}
+				p{
+					font-size: 18px;
+					line-height: 24px;
+				}
+			}
+			&-price{
+				padding-left: 15px;
+				padding-right: 15px;
+			}
+		}
+	}
+}
+@media screen and (max-width: 321px) {
+	.hero{
+		&-banner{
+			.intro{
+				&-label{
+					margin-bottom: 5px;
+				}
+			}
+			&-caption{
+				right: 0px;
+				h1{
+					font-size: 20px;
+					line-height: 26px;
+					padding-bottom: 0px;
+				}
+				p{
+					font-size: 14px;
+					line-height: 20px;
+				}
+			}
+			&-price{
+			    font-size: 16px;
+			    line-height: 22px;
+			    padding: 5px 5px;
+			}
+		}
+	}
+}
+

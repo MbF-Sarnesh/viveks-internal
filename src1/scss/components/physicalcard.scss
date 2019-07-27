@@ -1,0 +1,85 @@
+.gift-card{
+		.col-4{  
+			&:nth-of-type(n+4) {
+				margin-top: 20px;
+			}
+		}
+	}
+.buy{
+	&-card{
+	text-align: right;	
+	}
+	&-physical , &-ecard{	
+		&-con{
+			display: none;
+		}
+	}
+}
+.tab-con{
+	display: none;
+	&.active{
+		display: block;
+	}
+}
+.gift-card{
+	.col-4{
+		padding-right: 10px;
+		padding-left: 10px;
+	}
+}
+
+.myaccount-form1{
+	text-align: right;
+	.button-primary {
+		border: 1px solid #174386;
+        border-radius: 4px;
+	}
+}
+.features-card{
+	color:$gray;
+	padding-bottom: 0px;
+	p{
+		padding: 0px;
+	}
+}
+.features-card-normalcolor{
+	p{
+		padding: 0px;
+	}
+}
+.pirview-card{
+	background-color: #ffffff;
+	padding: 20px;
+}
+.list-tag-color li::before {
+  content: "\2022";
+  color: red;
+  font-weight: bold;
+  display: inline-block; 
+  margin-right: 10px;
+}
+.giftcard-btn{
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+.featurecard-name{
+	padding-top: 132px;
+	p{
+		padding-bottom:0px;
+	}
+	
+}
+.gift-card-buycard{
+	margin-right: -5px;
+	margin-right: -5px;
+}
+@media screen and (max-width: 768px){
+	.gift-card{
+		.col-4{  
+			&:nth-of-type(n+2) {
+				margin-top: 20px;
+			}
+		}
+	}
+}
+
