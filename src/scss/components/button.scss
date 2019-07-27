@@ -1,6 +1,6 @@
 /*.button {
   background-color: $primrose;
-  font-family: $quicksand-bold;
+  font-family: $nunito-bold;
   border: 1px solid $primrose;
   color: $white;
   cursor: pointer;
@@ -111,7 +111,7 @@ button{
 .button{
     display: inline-block;
     position: relative;
-    font-family: $quicksand-bold;
+    font-family: $nunito-bold;
     
     button,a{
         background-color: transparent;
@@ -119,12 +119,12 @@ button{
         cursor: pointer;
         display: inline-block;
         font-weight: 700;       
-        min-width: 200px;
+        min-width: 175px;
         padding: 13px 18px;
         position: relative;
         text-align:center;
         font-size: 14px;
-        letter-spacing: 0px;
+        letter-spacing: 2px;
         line-height: 19px;
         text-transform: uppercase;
         z-index: 1;
@@ -172,12 +172,6 @@ button{
             }
         }
     }
-    &-small{
-        button,a{
-            min-width: 140px;
-
-        }
-    }
     &-territory{
         button,a{
             background-color: $white;
@@ -196,16 +190,18 @@ button{
     min-width: 160px;
   }
 }
-/*.maximumbtn{
+.maximumbtn{
   button{
     min-width: 200px;
+    margin-bottom: 40px;
   }
-}*/
+}
 
 @media screen and (max-width: 1024px) {
     .button{
         button,a{
-            /*min-width: 175px;*/  
+            /*min-width: 175px;*/
+            
         }
     }
 }
@@ -228,7 +224,9 @@ button{
         }
     }
 }
+
 /* General styles for all types of buttons */
+
 .progress-button {
   position: relative;
   display: inline-block;
@@ -361,7 +359,7 @@ button{
 }
 @media screen and (max-width: 640px){
   .button{
-    /*max-width: 175px;*/
+    max-width: 175px;
     margin: 0 auto;
 
     &-stripe,&-paypal{

@@ -1,3 +1,20 @@
+.home-banner-slider {
+	.slick-dots {
+	    position: absolute;
+	    bottom: 15px;
+	    transform: translateX(-50%);
+	    left: 50%;
+	    li {
+	    	background-color:rgba(255,255,255,0.6);
+	    	opacity: 1;
+	    }
+	    .slick-active {
+	    	@include width-height(24px,10px);
+	    	background-color:$crimsonRed;
+		    border-radius: 6px;
+	    }
+	}
+}
 .hero{
 	&-banner{
 		position: relative;
@@ -37,11 +54,12 @@
 			max-width: 960px;
 			h1{
 				color: white;
-				padding-bottom: 5px;
+				padding-bottom: 10px;
+				line-height: 60px;
 			}
 			p{
 				font-size: 35px;
-				line-height: 41px;
+				line-height: 42px;
 				letter-spacing: -1px;
 				font-family: $nunito-bold;
 				padding-bottom: 10px;
@@ -67,9 +85,13 @@
 			max-width: 430px;
 			padding: 12px 0px;	
 			position: relative;
-			span{
-				padding-right: 5px;
+			strong{
 				display: inline-block;
+    			font-size: 35px;
+    			font-family: $nunito-bold;
+				padding-right: 5px;
+    			letter-spacing: -1px;
+				line-height: 42px;
 				vertical-align: middle;
 				margin: 0px;
 				&:last-of-type{
@@ -82,6 +104,20 @@
 				background-color: $crimsonRed;
 				z-index: -1;
 			}
+			.strike_text {
+			  text-decoration:line-through;
+			  font-size: 18px;
+			  vertical-align: bottom;
+			}
+			.offer_text {
+			  font-size: 18px;
+			  vertical-align: bottom;
+			}
+		}
+		
+		.intro-label {
+			letter-spacing: 1px;
+			margin-bottom: 22px;
 		}
 	}
 	&-slide{
@@ -176,6 +212,9 @@
 	}
 	.hero{
 		&-banner{
+			&-intro{
+			    padding: 0px 15px 10px;
+			}
 			&-content{
 				height: calc(90vh - 111px);
 				img{
@@ -183,9 +222,11 @@
 				}
 			}
 			&-caption{
-				@include align-items(center);
+				@include align-items(flex-start);
 				left: 0px;
 				bottom:150px;
+				max-width: 100%;
+				text-align: left;
 				h1{
 					font-size: 30px;
 					line-height: 36px;
@@ -196,7 +237,8 @@
 				}
 			}
 			&-price{
-				padding-right: 20px;
+				padding-left: 15px;
+				padding-right: 15px;
 			}
 		}
 	}

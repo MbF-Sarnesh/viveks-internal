@@ -715,7 +715,7 @@ button.ui-button::-moz-focus-inner {
 	margin-right: 20px;
 	overflow: hidden;
 	text-overflow: ellipsis;
-	font-family: $quicksand-bold;
+	font-family: $nunito-bold;
 }
 .ui-selectmenu-button.ui-button {
 	border: $fm-border-thickness solid $selectmenuborder;
@@ -1280,7 +1280,7 @@ select{
 	/*@include transition-event(all, .5s, linear);*/
 	&:hover{ 
 		color:$black;
-		font-family: $quicksand-bold;
+		font-family: $nunito-bold;
 	} 
 }
 

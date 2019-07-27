@@ -1,6 +1,7 @@
 @import 'base/index';
 @import "media/media1";
 
+@import "components/menu";
 @import "components/header";
 @import "components/home-banner";
 @import "components/banner-card";
@@ -30,8 +31,8 @@
 @import "components/deliverydetails";
 @import "components/payment";
 @import "components/physicalcard";
-@import "components/paymentoption";
-@import "components/forgot-password";
+@import "components/cover-banner";
+
 
 
 /*form*/

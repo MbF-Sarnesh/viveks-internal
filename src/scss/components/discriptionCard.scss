@@ -1,5 +1,5 @@
 .discription_card{
-	background: white;
+	padding-bottom: 48px;
 	.row.type-3{
 		margin: 0px -9px;
 		.col-4{
@@ -58,19 +58,22 @@
 }
 .dis_card{
     @include background-opacity($crimsonRed, 0.03);
-	width: 100%;
-	height: 100%;
-	margin-top: 10px;
-	padding:95px 60px 80px 35px;
-	font-size: 20px;
-	line-height: 26px;
 	font-family: $nunito-regular;
+	flex-direction: column;
+	font-size: 20px;
+	display: flex;
+	height: 100%;
+	line-height: 26px;
 	position: relative;
+	justify-content: space-between;
+	margin-top: 14px;
+	padding:65px 30px 40px 35px;
+	width: 100%;
 	&-quote{
 		position: absolute;
-		top: -10px;
-		width: 60px;
-		height: 40px;
+		top: -13px;
+		width: 55px;
+		height: 36px;
 		img{
 			width:100%;
 			height:100%;
@@ -79,7 +82,7 @@
 	}
 }
 .row.type-4{
-	padding-top:65px; 
+	padding:25px 0px; 
 	margin: 0px -9px;
 	.col-4{
 		padding: 0px 9px;
@@ -87,7 +90,6 @@
 	.text_con{
 		width: 100%;
 		padding: 10px 40px;
-		background: #f1f1f1;
 		@include display-flex;
 		@include justify-content(center);
 		/*justify-content: space-around;*/
@@ -99,27 +101,30 @@
 			height: 60px;
 			max-width: 100px;
 			img{
-				height: 100%;
-				width: 100%;
+				height: 55px;
+				width: 72px;
 				object-fit: contain;
 				object-position: center;
 			}
 		}
 		.para{
-				max-width: calc(100%-100px);
-				@include flex(0 0 calc(100%-100px));
+				max-width: calc(100% - 100px);
+				@include flex(0 0 calc(100% - 100px));
 			p{
-				font-size: 10px;
-				padding: 0px;
-				padding: 20px;
-				letter-spacing: 1px;
-				font-family: $nunito-bold;
-				color: $darkCeruleanBlue;
-				text-transform: uppercase;
+				font-family: Nunito-ExtraBold;
 				font-size: 16px;
+				color: #1C5798;
+				letter-spacing: -0.02px;
+				padding: 20px;
+				text-transform: uppercase;
 				line-height: 22px;
 			}
 		}
+	}
+}
+@media screen and (max-width: 1430px){
+	.discription_card-slider,.row.type-1 {
+		margin: 0px 15px;
 	}
 }
 @media screen and (min-width: 1700px){
@@ -141,9 +146,6 @@
 		padding-bottom: 0px;
 	}
 	.discription_card{
-		.container{
-			padding: 0px;
-		}
 		.row{
 			&.type-3{
 				margin: 0px;
@@ -160,12 +162,19 @@
 		}
 		&-slider{
 			margin: 0px;
+			position: relative;
 		}
 		.slick-slide{
 			padding: 0px;
 		}
 		.dis_card{
-			padding: 40px 20px;
+			padding: 40px;
+			p {
+				font-size: 16px;
+			}
+			h4 {
+				font-size: 18px;
+			}
 		}
 		.row.type-4{
 			margin: 0px;
@@ -181,8 +190,21 @@
 					}	
 				}
 				.text_con{
-					padding: 10px 20px;
-					margin-bottom: 2px;
+					padding: 10px 20px 10px 35px;
+					justify-content: start;
+					img {
+						height: 48px;
+						width: 44px;
+					}
+					.icon{
+						@include flex(0 0 68px);
+						height: 45px;
+						max-width: 45px;
+					}
+					.para{
+						max-width: calc(100% - 68px);
+						@include flex(0 0 calc(100% - 68px));
+					}
 				}
 			}
 		}
@@ -196,7 +218,7 @@
 @media screen and (max-width: 767px){
 	.row{
 		&.type-4{
-			padding-top: 25px;
+			padding-top: 80px;
 			.text_con{
 				@include display-flex;
 				@include justify-content(end);
